@@ -220,7 +220,7 @@ body, html {
   background-size: contain; }
 
 #sec2 {
-  background: linear-gradient(#e0e0e0, white);
+  background: linear-gradient(90deg, white, gray);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -233,8 +233,7 @@ body, html {
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
-  z-index: 9;
-  box-shadow: 0px 50px 50px 50px white inset; }
+  z-index: 9; }
 
 #sec4 {
   height: 100vh;
@@ -268,7 +267,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
-    padding: 150px 100px 150px 0px; }
+    padding: 200px 100px 200px 0px; }
     .projects .right-content .grid-item {
       background-color: blue;
       border-radius: 10px;
