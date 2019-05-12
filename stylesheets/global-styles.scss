@@ -189,7 +189,7 @@ p {
   z-index: 11;
   top: 0px;
   font-size: 13px !important;
-  box-shadow: 0px 5px 15px 5px rgba(black,.1);
+  //box-shadow: 0px 5px 15px 5px rgba(black,.1);
 
   h2 {
     position: absolute;
@@ -259,25 +259,105 @@ p {
   background: linear-gradient(white, #BDBDBD);
   width: 100%;
   height: 400px;
+  //background-image: url("../../res/gifs/quickkeys.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  h1 {
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    padding-top: 60px;
+    font-family: $FontPrimary;
+    mix-blend-mode: difference;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .project-icon {
+    background: black;
+    width: 100px;
+    height: 100px;
+    padding: 0px auto 0px auto;
+  }
 }
 
 .project-container {
   max-width: 1100px;
   padding: 50px;
-  background-color: red;
+  //background-color: red;
   margin: auto;
+  display: flex;
+  font-family: $FontPrimary;
+  line-height: 30px;
+
+  h2 {
+    color: black;
+  }
+
+  p {
+    color: black;
+    opacity: 0.8;
+  }
+}
+
+.img-container {
+  //background: blue;
+}
+
+.text-container {
+  //background: blue;
+  margin-left: 50px;
 }
 
 .shot {
   //position: absolute;
   background: black;
   width: 300px;
-  background-image: url("../res/gifs/drummerboi.gif");
+  background-image: url("../../res/gifs/drummerboi.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 40px;
 }
 
 .shot-img {
   padding-top: 56.25%;
+}
+
+.back-link {
+  display: flex;
+  position: fixed;
+  color: black;
+  font-weight: bold;
+  bottom: 40px;
+  left: 40px;
+  font-size: 22px;
+  line-height: 40px;
+  transition: 300ms;
+  z-index: 10;
+
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+
+    .back-arrow {
+      transform: translateX(-10px);
+    }
+  }
+}
+
+.back-arrow {
+  //background: red;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background-image: url("../../res/back.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 300ms;
 }

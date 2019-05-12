@@ -299,8 +299,7 @@ p {
   width: 100%;
   z-index: 11;
   top: 0px;
-  font-size: 13px !important;
-  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.1); }
+  font-size: 13px !important; }
   .nav h2 {
     position: absolute;
     margin-left: 45px;
@@ -353,23 +352,78 @@ p {
 .project-banner {
   background: linear-gradient(white, #BDBDBD);
   width: 100%;
-  height: 400px; }
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .project-banner h1 {
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    padding-top: 60px;
+    font-family: "Montserrat", sans-serif;
+    mix-blend-mode: difference; }
+  .project-banner p {
+    text-align: center; }
+  .project-banner .project-icon {
+    background: black;
+    width: 100px;
+    height: 100px;
+    padding: 0px auto 0px auto; }
 
 .project-container {
   max-width: 1100px;
   padding: 50px;
-  background-color: red;
-  margin: auto; }
+  margin: auto;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  line-height: 30px; }
+  .project-container h2 {
+    color: black; }
+  .project-container p {
+    color: black;
+    opacity: 0.8; }
+
+.text-container {
+  margin-left: 50px; }
 
 .shot {
   background: black;
   width: 300px;
-  background-image: url("../res/gifs/drummerboi.gif");
+  background-image: url("../../res/gifs/drummerboi.gif");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  margin-bottom: 40px; }
 
 .shot-img {
   padding-top: 56.25%; }
+
+.back-link {
+  display: flex;
+  position: fixed;
+  color: black;
+  font-weight: bold;
+  bottom: 40px;
+  left: 40px;
+  font-size: 22px;
+  line-height: 40px;
+  transition: 300ms;
+  z-index: 10; }
+  .back-link:hover {
+    opacity: 0.7;
+    cursor: pointer; }
+    .back-link:hover .back-arrow {
+      transform: translateX(-10px); }
+
+.back-arrow {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background-image: url("../../res/back.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 300ms; }
 
 /*# sourceMappingURL=output.css.map */
