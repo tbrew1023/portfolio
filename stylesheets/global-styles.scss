@@ -196,7 +196,7 @@ p {
     margin-left: 45px;
     font-family: $FontPrimary;
     font-size: 18px;
-    opacity: 0.7;
+    opacity: 1;
     line-height: 30px;
   }
 
@@ -316,7 +316,7 @@ p {
 .shot {
   //position: absolute;
   background: black;
-  width: 300px;
+  width: 500px;
   background-image: url("../../res/gifs/drummerboi.gif");
   background-position: center;
   background-repeat: no-repeat;
@@ -364,15 +364,131 @@ p {
 
 .sv1 {
   background-image: url("../../res/gifs/sv-frozen-mountain.gif");
-  padding-top: 75%
+  padding-top: 75%;
+  background-size: cover;
 }
 
 .sv2 {
   background-image: url("../../res/gifs/sv-aquatic-kingdom.gif");
-  padding-top: 75%
+  padding-top: 75%;
+  background-size: cover;
 }
 
 .sv3 {
   background-image: url("../../res/gifs/sv-skyward-terminal.gif");
-  padding-top: 75%
+  padding-top: 75%;
+  background-size: cover;
+}
+
+.tnb {
+  background-image: url("../../res/gifs/puzzle.gif");
+  background-size: cover;
+}
+
+.qk {
+  background-image: url("../../res/gifs/quickkeys.gif");
+  background-size: cover;
+}
+
+.banners {
+  //display: grid;
+  //grid-template-columns: 1fr 1fr;
+  margin-top: 60px;
+}
+
+.banner {
+  //background: gray;
+  height: 100vh;
+  padding: 200px 0px 0px 200px;
+  background-attachment: fixed;
+  transition: 300ms;
+  text-decoration: none !important;
+
+  h1 {
+    color:black;
+    margin: 0px;
+    //padding-top: 120px;
+    //padding-left: 150px;
+    font-size: 60px;
+    font-weight: bold;
+    mix-blend-mode: difference;
+    //text-align: center;
+    font-family: $FontPrimary;
+    transition: 600ms;
+    text-decoration: none !important;
+    margin-bottom: 45px;
+  }
+}
+
+.banner1 {
+
+}
+
+.banner2 {
+
+}
+
+.banner3 {
+
+}
+
+.banner4 {
+
+}
+
+.banner-img {
+  height: 100px;
+  margin-top: -600px;
+  transition: 600ms;
+}
+
+.banner-img1 {
+  background-size: contain;
+  background-position: -50px -70px;
+  background-image: url("../../res/gifs/bart2.gif");
+  opacity: 0;
+}
+
+.banner-img2 {
+  background-size: contain;
+  background-position: 400px -300px;
+  background-image: url("../../res/gifs/soniccd.gif");
+  opacity: 0;
+}
+
+.banner-img3 {
+  background-size: contain;
+  background-position: -100px -170px;
+  background-image: url("../../res/gifs/lockedout.gif");
+  opacity: 0;
+}
+
+.banner-img4 {
+  background-size: contain;
+  background-position: center;
+  background-image: url("../../res/gifs/cool2.gif");
+  opacity: 0;
+}
+
+.view-button {
+  //background-color: red;
+  width: 120px;
+  height: 60px;
+  border-radius: 10px;
+  border: 2px black solid;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  font-weight: bold;
+  background: black;
+  //margin-left: 150px;
+  transition: 300ms;
+  margin-top: 30px;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+  }
 }
