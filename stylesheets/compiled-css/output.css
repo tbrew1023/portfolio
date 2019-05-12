@@ -426,4 +426,16 @@ p {
   background-size: cover;
   transition: 300ms; }
 
+.sv1 {
+  background-image: url("../../res/gifs/sv-frozen-mountain.gif");
+  padding-top: 75%; }
+
+.sv2 {
+  background-image: url("../../res/gifs/sv-aquatic-kingdom.gif");
+  padding-top: 75%; }
+
+.sv3 {
+  background-image: url("../../res/gifs/sv-skyward-terminal.gif");
+  padding-top: 75%; }
+
 /*# sourceMappingURL=output.css.map */
