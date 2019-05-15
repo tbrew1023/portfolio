@@ -20,6 +20,11 @@ $ColorText: black;
 $ColorWhite: #FFFFFF;
 $ColorBlack: #000000;
 
+$ColorProject1:#317e9d;
+$ColorProject2:#8594a3;
+$ColorProject3:#d0a9ac;
+$ColorProject4: #ef9593;
+
 //images
 $ImageBanner1: "../../res/gifs/bearboi.gif";
 $ImageBanner2: "../../res/gifs/yuasa1.gif";
@@ -66,7 +71,7 @@ body, html {
     font-family: $FontPrimary;
     opacity: 0.4;
     padding: 23% 0px 0px 10%;
-    width: 700px;
+    width: 550px;
     line-height: 30px;
   }
 }
@@ -83,12 +88,11 @@ body, html {
 
 #sec2 {
   //background-image: url($ImageBanner2);
-  background: linear-gradient(90deg, white, gray);
+  background: linear-gradient(90deg, white, #bdbdbd);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   //background-color: #eeeeee;
-  z-index: 10;
   //box-shadow: 0px 0px 75px 45px rgba(black,0.2) inset;
 }
 
@@ -106,11 +110,10 @@ body, html {
 
 #sec4 {
   height: 100vh;
-  //background-image: url($ImageBanner2);
+  background: linear-gradient(90deg, white, #bdbdbd);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #E0E0E0;
 }
 
 /*.fade {
@@ -133,14 +136,10 @@ p {
   margin-left: 150px;
 }*/
 
-.projects {
+.projects, .drawings {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
-
-  .left-content {
-    //background: #E0E0E0;
-    //height: 100vh;
-  }
+  height: 100vh;
 
   .right-content {
     //background: #E0E0E0;
@@ -158,25 +157,55 @@ p {
       transition: 300ms;
       height: 0px;
       padding-top: 56.25%;
+      text-align: center;
 
       &:hover {
         cursor: pointer;
         transform: scale(1.05);
         box-shadow: 0px 15px 20px 5px rgba(black,0.1);
+
+
+        &:hover {
+          &:after {
+            color: black;
+            text-decoration: none;
+          }
+        }
       }
     }
 
     #item1 {
       background-image: url("../../res/gifs/drummerboi.gif");
+      &:hover {
+        &:after {
+          //content: "Drummerboi";
+          text-decoration: none;
+        }
+      }
     }
     #item2 {
       background-image: url("../../res/gifs/quickkeys.gif");
+      &:hover {
+        &:after {
+          //content: "Quick Keys";
+        }
+      }
     }
     #item3 {
       background-image: url("../../res/gifs/puzzle.gif");
+      &:hover {
+        &:after {
+          //content: "JQuery Puzzle";
+        }
+      }
     }
     #item4 {
       background-image: url("../../res/gifs/sv-aquatic-kingdom.gif");
+      &:hover {
+        &:after {
+          //content: "Sonic Velocity";
+        }
+      }
     }
   }
 }
@@ -263,26 +292,36 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  margin-top: 60px;
 
   h1 {
-    color: white;
+    color: black;
     text-align: center;
     font-size: 60px;
     padding-top: 60px;
     font-family: $FontPrimary;
-    mix-blend-mode: difference;
+    //mix-blend-mode: difference;
   }
 
   p {
     text-align: center;
+    color: black;
   }
 
   .project-icon {
-    background: black;
+    //background: black;
     width: 100px;
     height: 100px;
     padding: 0px auto 0px auto;
   }
+}
+
+.sonicv-banner {
+  //background: linear-gradient(white, #42A5F5);
+}
+
+.drummerboi-banner {
+  //background: linear-gradient(white, #ef9a9a);
 }
 
 .project-container {
@@ -393,47 +432,151 @@ p {
 .banners {
   //display: grid;
   //grid-template-columns: 1fr 1fr;
-  margin-top: 60px;
+}
+
+.banner-content {
+  margin-left: 150px;
+}
+
+.wave {
+  position: fixed;
+  width: 100%;
+  height: 140px;
+  top: 350px;
+  background: url("../../res/wave.svg");
+  animation: wave 8s linear infinite;
+  transform: rotate(180deg);
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0px 0px;
+  }
+
+  100% {
+    background-position: -1900px 0px;
+  }
 }
 
 .banner {
   //background: gray;
-  height: 100vh;
-  padding: 200px 0px 0px 200px;
+  height: 40vh;
+  //background: url("../../res/wave.svg");
+  background-size: contain;
+  //background-position:top;
+  background-repeat:repeat-x;
   background-attachment: fixed;
+  filter:invert(1);
+  opacity: 0.4;
+  animation: wave 8s linear infinite;
   transition: 300ms;
   text-decoration: none !important;
 
+
   h1 {
-    color:black;
     margin: 0px;
+    line-height: 110px;
     //padding-top: 120px;
     //padding-left: 150px;
-    font-size: 60px;
+    font-size: 120px;
     font-weight: bold;
     mix-blend-mode: difference;
     //text-align: center;
     font-family: $FontPrimary;
     transition: 600ms;
     text-decoration: none !important;
-    margin-bottom: 45px;
+  }
+
+  p {
+    color: red;
+    mix-blend-mode: difference;
+    margin-bottom: 30px;
+    font-size: 22px;
+    //opacity: 0.5;
   }
 }
 
 .banner1 {
+  padding-top: 200px;
+  //background-image: url("../../res/gifs/soniccd.gif");
+  h1 {
+    color: $ColorProject1;
+  }
+  p {
+    color: $ColorProject1;
+  }
+  .view-button {
+    background:rgba(0,0,0,0);
+    border: 3px solid $ColorProject1;
+    color:$ColorProject1;
 
+    &:hover {
+      background: $ColorProject1;
+      color: black;
+    }
+  }
 }
 
 .banner2 {
+  h1 {
+    color: $ColorProject2;
+  }
+  p {
+    color: $ColorProject2;
+  }
+  .view-button {
+    background:rgba(0,0,0,0);
+    border: 3px solid $ColorProject2;
+    color: $ColorProject2;
 
+    &:hover {
+      background: $ColorProject2;
+      color: black;
+    }
+  }
+  //background-image: url("../../res/gifs/soniccd.gif");
 }
 
 .banner3 {
+  h1 {
+    color: $ColorProject3;
+  }
+  p {
+    color: $ColorProject3;
+  }
+  .view-button {
+    background:rgba(0,0,0,0);
+    border: 3px solid $ColorProject3;
+    color: $ColorProject3;
 
+    &:hover {
+      background: $ColorProject3;
+      color: black;
+    }
+  }
+  //background-image: url("../../res/gifs/soniccd.gif");
 }
 
 .banner4 {
+  h1 {
+    color: $ColorProject4;
+  }
+  p {
+    color: $ColorProject4;
+  }
+  .view-button {
+    background:rgba(0,0,0,0);
+    border: 3px solid $ColorProject4;
+    color: $ColorProject4;
 
+    &:hover {
+      background: $ColorProject4;
+      color: black;
+    }
+  }
+  //background-image: url("../../res/gifs/soniccd.gif");
 }
 
 .banner-img {
@@ -443,31 +586,23 @@ p {
 }
 
 .banner-img1 {
-  background-size: contain;
-  background-position: -50px -70px;
-  background-image: url("../../res/gifs/bart2.gif");
-  opacity: 0;
+
+  //op  acity: 0;
 }
 
 .banner-img2 {
-  background-size: contain;
-  background-position: 400px -300px;
-  background-image: url("../../res/gifs/soniccd.gif");
-  opacity: 0;
+
+  //opacity: 0;
 }
 
 .banner-img3 {
-  background-size: contain;
-  background-position: -100px -170px;
-  background-image: url("../../res/gifs/lockedout.gif");
-  opacity: 0;
+
+  //opacity: 0;
 }
 
 .banner-img4 {
-  background-size: contain;
-  background-position: center;
-  background-image: url("../../res/gifs/cool2.gif");
-  opacity: 0;
+
+  //opacity: 0;
 }
 
 .view-button {
@@ -475,20 +610,260 @@ p {
   width: 120px;
   height: 60px;
   border-radius: 10px;
-  border: 2px black solid;
+  border: 3px black solid;
   text-align: center;
   line-height: 60px;
-  color: white;
+  color: black;
   font-weight: bold;
-  background: black;
+  background: rgba(0,0,0,0);
   //margin-left: 150px;
   transition: 300ms;
   margin-top: 30px;
+  padding: 15px 30px 15px 30px;
+  mix-blend-mode: difference;
+  z-index: 100;
 
   &:hover {
-    background-color: white;
-    color: black;
+    background-color: rgba(black,1);
+    color: rgba(white,1);
     cursor: pointer;
     text-decoration: none;
+  }
+}
+
+.right-content-drawings {
+  //background: #E0E0E0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  padding: 200px 100px 200px 0px;
+
+  .grid-item {
+    //background-color: blue;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 300ms;
+    height: 550px;
+    margin-bottom: 30px;
+    filter:grayscale(1);
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      box-shadow: 0px 15px 20px 5px rgba(black,0.1);
+
+      &:after {
+        //content: "Hello werld";
+      }
+
+    }
+  }
+
+  #item1 {
+    background-image: url("../../res/drawings/doodle15.jpg");
+    background-size: 160%;
+    //background-size: contain;
+    //transform: rotate(30deg);
+  }
+  #item2 {
+    background-image: url("../../res/drawings/doodle13.jpg");
+    background-size: 160%;
+    background-position: -160px center;
+  }
+  #item3 {
+    background-image: url("../../res/drawings/doodle14.jpg");
+    background-position: center -150px;
+    background-size: 150%;
+  }
+  #item4 {
+    background-image: url("../../res/drawings/doodle14.jpg");
+    background-size: 160%;
+  }
+  #item5 {
+    background-image: url("../../res/drawings/doodle11.jpg");
+  }
+  #item6 {
+    background-image: url("../../res/drawings/doodle6.jpg");
+  }
+  #item7 {
+    background-image: url("../../res/drawings/doodle7.jpg");
+  }
+  #item8 {
+    background-image: url("../../res/drawings/doodle10.jpg");
+  }
+  #item9 {
+    background-image: url("../../res/drawings/doodle11.jpg");
+  }
+}
+
+.top {
+  position: fixed;
+  width: 100%;
+  height: 480px;
+  margin: 0px;
+  background: black;
+  bottom: 0px;
+  z-index: -1;
+}
+
+.footer {
+  background-color: #B0BEC5;
+  //background-image: linear-gradient(-213deg,$colorPrimary 22%,$colorPrimaryDark 100%);
+  width: 100%;
+  margin: 0px;
+  height: 200px;
+  padding-bottom: 60px;
+
+  .bubble-container {
+    display: inline-flex;
+    padding-bottom: 100px;
+  }
+
+  h3 {
+    color: rgba(black, 0.4);
+    margin-bottom: 25px;
+    opacity: 0.4;
+  }
+
+  .social-bubble {
+    //background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 10px;
+    transition: 300ms;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+
+  #facebook {
+    background-image: url("../../res/fb.svg");
+  }
+
+  #instagram {
+    background-image: url("../../res/insta2.png");
+    filter:invert(1);
+  }
+
+  #twitter {
+    background-image: url("../../res/twitter.svg");
+  }
+
+  #pinterest {
+    background-image: url("../../res/pinterest.svg");
+    filter: invert(1);
+  }
+
+  .footer-logo {
+    //background-color: red;
+    width: 180px;
+    height: 90px;
+    //background-image: url("../../res/logo(white).png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin: 10px 10px 10px 0px;
+    }
+  }
+
+  .inner-footer {
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    text-align: center;
+  }
+}
+
+.sub-footer {
+  background-color: #90A4AE;
+  width: 100%;
+  margin: 0px;
+  height: 90px;
+  color: white;
+  line-height: 90px;
+  text-align: center;
+  font-size: 14px;
+
+  a {
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    padding-left: 10px;
+    opacity: 0.7;
+  }
+}
+
+//----------gallery stuff----------
+
+.gallery-container {
+  //background: red;
+  max-width: 1100px;
+  height: 1000px;
+  margin: 180px auto 0px auto;
+
+  h1 {
+    font-family: $FontPrimary;
+    font-size: 60px;
+    font-weight: lighter;
+    opacity: 0.7;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    //background: yellow;
+    width: 100%;
+    height: 1000px;
+    //padding-top: 60px;
+  }
+
+  .gal-item {
+    margin: 20px;
+    background: #BDBDBD;
+    height: 400px;
+    border-radius:10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    filter:invert(1);
   }
 }
