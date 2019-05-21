@@ -432,10 +432,14 @@ p {
 .banners {
   //display: grid;
   //grid-template-columns: 1fr 1fr;
+  background: url("../../res/gifs/waiting.gif");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-attachment: fixed;
 }
 
 .banner-content {
-  margin-left: 150px;
+  margin-left: 300px;
 }
 
 .wave {
@@ -836,13 +840,14 @@ p {
   //background: red;
   max-width: 1100px;
   height: 1000px;
-  margin: 180px auto 0px auto;
+  margin: 60px auto 0px auto;
 
   h1 {
     font-family: $FontPrimary;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: lighter;
     opacity: 0.7;
+    margin-left: 40px;
   }
 
   .gallery-grid {
@@ -851,14 +856,173 @@ p {
     //background: yellow;
     width: 100%;
     height: 1000px;
-    //padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .gal-item {
-    margin: 20px;
+    margin: 40px 0px 0px 40px;
     background: #BDBDBD;
-    height: 400px;
+    height: 550px;
     border-radius:10px;
+    transition: 300ms;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 15px 20px 5px rgba(black,0.1);
+      cursor: pointer;
+    }
+  }
+
+  .item1 {
+    background: url("../../res/drawings/doodle1.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .item2 {
+    background: url("../../res/drawings/doodle2.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .item3 {
+    background: url("../../res/drawings/doodle3.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .item4 {
+    background: url("../../res/drawings/doodle4.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .item5 {
+    background: url("../../res/drawings/doodle5.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .item6 {
+    background: url("../../res/drawings/doodle6.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .item7 {
+    background: url("../../res/drawings/doodle7.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 670px;
+  }
+
+  .item8 {
+    background: url("../../res/drawings/doodle8.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 800ms;
+  }
+
+  .item9 {
+    background: url("../../res/drawings/doodle9.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .item10 {
+    background: url("../../res/drawings/doodle10.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+  }
+
+  .item11 {
+    background: url("../../res/drawings/doodle11.jpg");
+    background-position: center -190px;
+    background-size: 130%;
+    height: 400px;
+  }
+
+  .item12 {
+    background: url("../../res/drawings/doodle12.jpg");
+    background-position: left;
+    background-size: cover;
+    height: 200px;
+  }
+
+  .item13 {
+    background: url("../../res/drawings/doodle13.jpg");
+    background-position: center;
+    background-size: 120%;
+    height: 400px;
+  }
+
+  .item14 {
+    background: url("../../res/drawings/doodle14.jpg");
+    background-position: center -100px;
+    background-size: 120%;
+    height: 510px;
+
+  }
+
+  .item15 {
+    background: url("../../res/drawings/doodle15.jpg");
+    background-position: center;
+    background-size: 120%;
+    height: 400px;
+  }
+
+  .item16 {
+    background: url("../../res/drawings/board.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+  }
+
+  .item17 {
+    background: url("../../res/drawings/tails.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+  }
+
+  .item18 {
+    background: url("../../res/drawings/girl.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+  }
+
+  .item19 {
+    background: url("../../res/drawings/color.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+  }
+}
+
+.gallery-banner {
+  background: red;
+  width: 100%;
+  height: 400px;
+  background: url("../../res/drawings/doodle9.jpg");
+  background-attachment: fixed;
+  background-position: center -120px;
+  text-align: center;
+  font-family: $FontPrimary;
+
+  h1 {
+    color: white;
+    font-size: 100px;
+    mix-blend-mode: difference;
+    padding-top: 150px;
+  }
+
+  p {
+    color: white;
+    mix-blend-mode: difference;
+    font-size: 22px;
+    font-weight: bold;
   }
 }
 
