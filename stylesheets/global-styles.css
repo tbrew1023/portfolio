@@ -353,7 +353,7 @@ body, html {
 }
 
 .portfolio-grid .port5 {
-  background: url("../res/gifs/monday.gif");
+  background: url("../res/gifs/material.gif");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center 0px;
@@ -365,7 +365,7 @@ body, html {
 }
 
 .portfolio-grid .port6 {
-  background: url("../res/gifs/bearboi.gif");
+  background: url("../res/gifs/monday.gif");
   background-repeat: no-repeat;
   background-position: top;
   background-size: 100%;
@@ -377,7 +377,7 @@ body, html {
 }
 
 .portfolio-grid .port7 {
-  background: url("../res/gifs/material.gif");
+  background: url("../res/gifs/bearboi.gif");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -752,6 +752,14 @@ p {
   opacity: 0.8;
 }
 
+.full-img {
+  display: block;
+}
+
+.full-img .shot {
+  width: 100%;
+}
+
 .text-container {
   margin-left: 50px;
 }
@@ -763,7 +771,6 @@ p {
 .shot {
   background: black;
   width: 500px;
-  background-image: url("../res/gifs/drummerboi.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -838,6 +845,15 @@ p {
 .qk {
   background-image: url("../res/gifs/quickkeys.gif");
   background-size: cover;
+}
+
+.db {
+  background-image: url("../res/gifs/drummerboi.gif");
+  background-size: cover;
+}
+
+img {
+  width: 100%;
 }
 
 .banners {
@@ -1371,9 +1387,8 @@ ul {
 }
 
 @media only screen and (max-width: 768px) {
-  body {
-    -webkit-filter: invert(1);
-            filter: invert(1);
+  .nav {
+    background: red;
   }
 }
 /*# sourceMappingURL=global-styles.css.map */
