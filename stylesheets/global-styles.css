@@ -1434,26 +1434,16 @@ ul {
   .portfolio-grid .hover-title {
     padding-left: 20px;
   }
-  .page-head {
-    height: 100vh;
-  }
-  .page-head h1 {
-    margin-top: 0px;
-    font-size: 28px;
-    padding-top: 350px;
-  }
-  .page-head .animation {
-    height: 200px;
-    background-position: -60px center;
-    margin-top: -50px;
-  }
-  .page-head p {
-    font-size: 10px;
-    margin-top: 10px;
+  .gallery-container {
+    width: 100%;
   }
   .gallery-grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .port-item {
+    opacity: 1;
+    margin-top: 0px;
   }
 }
 /*# sourceMappingURL=global-styles.css.map */

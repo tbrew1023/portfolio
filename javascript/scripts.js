@@ -22,29 +22,35 @@ $(window).scroll(function() {
       "opacity":"1",
       "margin-top":"0px"
     });
-    $(".port1").css({
-      "opacity":"1",
-      "margin-top":"0px"
-    });
+    setTimeout(function() {
+      $(".port1").css({
+        "opacity":"1",
+        "margin-top":"0px"
+      });
+    }, 300);
   }
   if(scroll >= 800) {
     $(".port5").css({
       "opacity":"1",
       "margin-top":"0px"
     });
-    $(".port6").css({
-      "opacity":"1",
-      "margin-top":"0px"
-    });
+    setTimeout(function() {
+      $(".port6").css({
+        "opacity":"1",
+        "margin-top":"0px"
+      });
+    }, 300);
   }
   if(scroll >= 1200) {
     $(".port7").css({
       "opacity":"1",
       "margin-top":"0px"
     });
-    $(".port8").css({
-      "opacity":"1",
-      "margin-top":"0px"
-    });
+    setTimeout(function() {
+      $(".port8").css({
+        "opacity":"1",
+        "margin-top":"0px"
+      });
+    }, 300);
   }
 });
