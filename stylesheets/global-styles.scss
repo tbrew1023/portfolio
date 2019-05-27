@@ -2,8 +2,8 @@
 @import 'mixins/_resume';
 
 //fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-$FontPrimary: 'Montserrat', sans-serif;
+//@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+$FontPrimary: 'Questrial', sans-serif;
 
 //styles
 $BorderRadius: 5px;
@@ -26,8 +26,8 @@ $ColorProject3:#d0a9ac;
 $ColorProject4: #ef9593;
 
 //images
-$ImageBanner1: "../../res/gifs/bearboi.gif";
-$ImageBanner2: "../../res/gifs/yuasa1.gif";
+$ImageBanner1: "../res/gifs/bearboi.gif";
+$ImageBanner2: "../res/gifs/yuasa1.gif";
 $ImageBanner3: "";
 $ImageBanner4: "";
 $PortfolioThumb1: "";
@@ -36,6 +36,23 @@ $PortfolioThumb3: "";
 
 body, html {
   overflow: visible;
+}
+
+.page-head {
+  height: 30vh;
+  width: 100%;
+
+  h1 {
+    font-size: 36px;
+    margin-left: 0px !important;
+    margin-top: 250px;
+    color: black;
+  }
+
+  p {
+    font-size: 18px;
+    margin-top: 40px;
+  }
 }
 
 .background {
@@ -78,7 +95,7 @@ body, html {
 
 #sec1 {
   height: 100vh;
-  background-image: url("../../res/gifs/hello.gif");
+  background-image: url("../res/gifs/hello.gif");
   background-color: white;
   background-position: right;
   background-repeat: no-repeat;
@@ -175,7 +192,7 @@ p {
     }
 
     #item1 {
-      background-image: url("../../res/gifs/drummerboi.gif");
+      background-image: url("../res/gifs/drummerboi.gif");
       &:hover {
         &:after {
           //content: "Drummerboi";
@@ -184,7 +201,7 @@ p {
       }
     }
     #item2 {
-      background-image: url("../../res/gifs/quickkeys.gif");
+      background-image: url("../res/gifs/quickkeys.gif");
       &:hover {
         &:after {
           //content: "Quick Keys";
@@ -192,7 +209,7 @@ p {
       }
     }
     #item3 {
-      background-image: url("../../res/gifs/puzzle.gif");
+      background-image: url("../res/gifs/puzzle.gif");
       &:hover {
         &:after {
           //content: "JQuery Puzzle";
@@ -200,7 +217,7 @@ p {
       }
     }
     #item4 {
-      background-image: url("../../res/gifs/sv-aquatic-kingdom.gif");
+      background-image: url("../res/gifs/sv-aquatic-kingdom.gif");
       &:hover {
         &:after {
           //content: "Sonic Velocity";
@@ -220,11 +237,16 @@ p {
   font-size: 13px !important;
   //box-shadow: 0px 5px 15px 5px rgba(black,.1);
 
+  .nav-links {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
   h2 {
     position: absolute;
     margin-left: 45px;
     font-family: $FontPrimary;
-    font-size: 18px;
     opacity: 1;
     line-height: 30px;
   }
@@ -232,16 +254,12 @@ p {
   ul {
     display: inline-flex;
     list-style: none;
-    float:right;
-    margin-right: 45px;
-    font-weight: lighter;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin:0px auto 0px auto;
+    padding: 0px;
 
     a {
       text-decoration: none;
       height: 60px;
-      font-weight: bold;
       //transition: 300ms;
 
       &:hover {
@@ -258,30 +276,32 @@ p {
       font-family: $FontPrimary;
       line-height: 60px;
       color: black;
+      font-size: 14px;
+      font-weight: bold;
     }
   }
 }
 
 .indicator {
   background: black;
-  height: 5px;
-  border-radius: 20px 20px 0px 0px;
+  height: 3px;
+  border-radius: 50px 50px 0px 0px;
   width: 0%;
   transition: 300ms;
   margin-left: auto;
   margin-right: auto;
   opacity: 0;
-  margin-top: -5px;
+  margin-top: -3px;
 }
 
 .active {
   background: black;
-  height: 5px;
-  border-radius: 20px 20px 0px 0px;
+  height: 3px;
+  border-radius: 50px 50px 0px 0px;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -5px;
+  margin-top: -3px;
 }
 
 .project-banner {
@@ -356,7 +376,7 @@ p {
   //position: absolute;
   background: black;
   width: 500px;
-  background-image: url("../../res/gifs/drummerboi.gif");
+  background-image: url("../res/gifs/drummerboi.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -394,7 +414,7 @@ p {
   width: 40px;
   height: 40px;
   margin-right: 10px;
-  background-image: url("../../res/back.png");
+  background-image: url("../res/back.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -402,37 +422,37 @@ p {
 }
 
 .sv1 {
-  background-image: url("../../res/gifs/sv-frozen-mountain.gif");
+  background-image: url("../res/gifs/sv-frozen-mountain.gif");
   padding-top: 75%;
   background-size: cover;
 }
 
 .sv2 {
-  background-image: url("../../res/gifs/sv-aquatic-kingdom.gif");
+  background-image: url("../res/gifs/sv-aquatic-kingdom.gif");
   padding-top: 75%;
   background-size: cover;
 }
 
 .sv3 {
-  background-image: url("../../res/gifs/sv-skyward-terminal.gif");
+  background-image: url("../res/gifs/sv-skyward-terminal.gif");
   padding-top: 75%;
   background-size: cover;
 }
 
 .tnb {
-  background-image: url("../../res/gifs/puzzle.gif");
+  background-image: url("../res/gifs/puzzle.gif");
   background-size: cover;
 }
 
 .qk {
-  background-image: url("../../res/gifs/quickkeys.gif");
+  background-image: url("../res/gifs/quickkeys.gif");
   background-size: cover;
 }
 
 .banners {
   //display: grid;
   //grid-template-columns: 1fr 1fr;
-  background: url("../../res/gifs/waiting.gif");
+  background: url("../res/gifs/waiting.gif");
   background-repeat: no-repeat;
   background-position: bottom left;
   background-attachment: fixed;
@@ -447,7 +467,7 @@ p {
   width: 100%;
   height: 140px;
   top: 350px;
-  background: url("../../res/wave.svg");
+  background: url("../res/wave.svg");
   animation: wave 8s linear infinite;
   transform: rotate(180deg);
   pointer-events: none;
@@ -666,39 +686,39 @@ p {
   }
 
   #item1 {
-    background-image: url("../../res/drawings/doodle15.jpg");
+    background-image: url("../res/drawings/doodle15.jpg");
     background-size: 160%;
     //background-size: contain;
     //transform: rotate(30deg);
   }
   #item2 {
-    background-image: url("../../res/drawings/doodle13.jpg");
+    background-image: url("../res/drawings/doodle13.jpg");
     background-size: 160%;
     background-position: -160px center;
   }
   #item3 {
-    background-image: url("../../res/drawings/doodle14.jpg");
+    background-image: url("../res/drawings/doodle14.jpg");
     background-position: center -150px;
     background-size: 150%;
   }
   #item4 {
-    background-image: url("../../res/drawings/doodle14.jpg");
+    background-image: url("../res/drawings/doodle14.jpg");
     background-size: 160%;
   }
   #item5 {
-    background-image: url("../../res/drawings/doodle11.jpg");
+    background-image: url("../res/drawings/doodle11.jpg");
   }
   #item6 {
-    background-image: url("../../res/drawings/doodle6.jpg");
+    background-image: url("../res/drawings/doodle6.jpg");
   }
   #item7 {
-    background-image: url("../../res/drawings/doodle7.jpg");
+    background-image: url("../res/drawings/doodle7.jpg");
   }
   #item8 {
-    background-image: url("../../res/drawings/doodle10.jpg");
+    background-image: url("../res/drawings/doodle10.jpg");
   }
   #item9 {
-    background-image: url("../../res/drawings/doodle11.jpg");
+    background-image: url("../res/drawings/doodle11.jpg");
   }
 }
 
@@ -712,126 +732,74 @@ p {
   z-index: -1;
 }
 
-.footer {
-  background-color: #B0BEC5;
-  //background-image: linear-gradient(-213deg,$colorPrimary 22%,$colorPrimaryDark 100%);
-  width: 100%;
-  margin: 0px;
-  height: 200px;
-  padding-bottom: 60px;
+.bubble-container {
+  display: flex;  
+  padding-bottom: 100px;
+  z-index: 2;
+  margin: auto auto auto 50px;
+  top: 220px;
+  //bottom: 0px;
+  right: 0px;
+  left: 0px;
+  height: 110px;
+  width: 30px;
+}
 
-  .bubble-container {
-    display: inline-flex;
-    padding-bottom: 100px;
-  }
+h3 {
+  color: rgba(black, 0.4);
+  margin-bottom: 25px;
+  opacity: 0.4;
+}
 
-  h3 {
-    color: rgba(black, 0.4);
-    margin-bottom: 25px;
-    opacity: 0.4;
-  }
+.social-bubble {
+  //background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin-right: 10px;
+  transition: 300ms;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 5px;
 
-  .social-bubble {
-    //background-color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    margin-right: 10px;
-    transition: 300ms;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    &:hover {
-      cursor: pointer;
-      opacity: 0.5;
-    }
-  }
-
-  #facebook {
-    background-image: url("../../res/fb.svg");
-  }
-
-  #instagram {
-    background-image: url("../../res/insta2.png");
-    filter:invert(1);
-  }
-
-  #twitter {
-    background-image: url("../../res/twitter.svg");
-  }
-
-  #pinterest {
-    background-image: url("../../res/pinterest.svg");
-    filter: invert(1);
-  }
-
-  .footer-logo {
-    //background-color: red;
-    width: 180px;
-    height: 90px;
-    //background-image: url("../../res/logo(white).png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: 45px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  a {
-    text-decoration: none;
-    color: white;
-
-    &:hover {
-      opacity: 0.6;
-    }
-  }
-
-  ul {
-    list-style: none;
-
-    li {
-      margin: 10px 10px 10px 0px;
-    }
-  }
-
-  .inner-footer {
-    color: white;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 60px;
-    text-align: center;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
   }
 }
 
-.sub-footer {
-  background-color: #90A4AE;
-  width: 100%;
-  margin: 0px;
-  height: 90px;
+#facebook {
+  background-image: url("../res/fb.svg");
+  filter: invert(1);
+}
+
+#instagram {
+  background-image: url("../res/insta2.png");
+  //filter:invert(1);
+}
+
+#twitter {
+  background-image: url("../res/twitter.svg");
+  filter: invert(1);
+}
+
+#pinterest {
+  background-image: url("../res/pinterest.svg");
+  //filter: invert(1);
+}
+
+a {
+  text-decoration: none;
   color: white;
-  line-height: 90px;
-  text-align: center;
-  font-size: 14px;
 
-  a {
-    color: white;
-    text-decoration: none;
-    opacity: 1;
-
-    &:hover {
-      text-decoration: underline;
-    }
+  &:hover {
+    opacity: 0.6;
   }
+}
 
-  span {
-    padding-left: 10px;
-    opacity: 0.7;
-  }
+ul {
+  list-style: none;
 }
 
 //----------gallery stuff----------
@@ -839,7 +807,6 @@ p {
 .gallery-container {
   //background: red;
   max-width: 1100px;
-  height: 1000px;
   margin: 60px auto 0px auto;
 
   h1 {
@@ -847,7 +814,7 @@ p {
     font-size: 40px;
     font-weight: lighter;
     opacity: 0.7;
-    margin-left: 40px;
+    margin-left: 30px;
   }
 
   .gallery-grid {
@@ -855,15 +822,15 @@ p {
     grid-template-columns: 1fr 1fr 1fr;
     //background: yellow;
     width: 100%;
-    height: 1000px;
+    //height: 1000px;
     padding-bottom: 60px;
   }
 
   .gal-item {
-    margin: 40px 0px 0px 40px;
+    margin: 40px 20px 40px 20px;
     background: #BDBDBD;
     height: 550px;
-    border-radius:10px;
+    //border-radius:10px;
     transition: 300ms;
 
     &:hover {
@@ -874,91 +841,91 @@ p {
   }
 
   .item1 {
-    background: url("../../res/drawings/doodle1.jpg");
+    background: url("../res/drawings/doodle1.jpg");
     background-position: center;
     background-size: cover;
   }
 
   .item2 {
-    background: url("../../res/drawings/doodle2.jpg");
+    background: url("../res/drawings/doodle2.jpg");
     background-position: center;
     background-size: cover;
   }
 
   .item3 {
-    background: url("../../res/drawings/doodle3.jpg");
+    background: url("../res/drawings/doodle3.jpg");
     background-position: center;
     background-size: cover;
   }
 
   .item4 {
-    background: url("../../res/drawings/doodle4.jpg");
+    background: url("../res/drawings/doodle4.jpg");
     background-position: center;
     background-size: cover;
   }
 
   .item5 {
-    background: url("../../res/drawings/doodle5.jpg");
+    background: url("../res/drawings/doodle5.jpg");
     background-position: center;
     background-size: cover;
   }
 
   .item6 {
-    background: url("../../res/drawings/doodle6.jpg");
+    background: url("../res/drawings/doodle6.jpg");
     background-position: center;
     background-size: cover;
   }
 
   .item7 {
-    background: url("../../res/drawings/doodle7.jpg");
+    background: url("../res/drawings/doodle7.jpg");
     background-position: center;
     background-size: cover;
     height: 670px;
   }
 
   .item8 {
-    background: url("../../res/drawings/doodle8.jpg");
+    background: url("../res/drawings/doodle8.jpg");
     background-position: center;
     background-size: cover;
     height: 800ms;
   }
 
   .item9 {
-    background: url("../../res/drawings/doodle9.jpg");
+    background: url("../res/drawings/doodle9.jpg");
     background-position: center;
     background-size: cover;
   }
 
   .item10 {
-    background: url("../../res/drawings/doodle10.jpg");
+    background: url("../res/drawings/doodle10.jpg");
     background-position: center;
     background-size: cover;
     height: 300px;
   }
 
   .item11 {
-    background: url("../../res/drawings/doodle11.jpg");
+    background: url("../res/drawings/doodle11.jpg");
     background-position: center -190px;
     background-size: 130%;
     height: 400px;
   }
 
   .item12 {
-    background: url("../../res/drawings/doodle12.jpg");
+    background: url("../res/drawings/doodle12.jpg");
     background-position: left;
     background-size: cover;
     height: 200px;
   }
 
   .item13 {
-    background: url("../../res/drawings/doodle13.jpg");
+    background: url("../res/drawings/doodle13.jpg");
     background-position: center;
     background-size: 120%;
     height: 400px;
   }
 
   .item14 {
-    background: url("../../res/drawings/doodle14.jpg");
+    background: url("../res/drawings/doodle14.jpg");
     background-position: center -100px;
     background-size: 120%;
     height: 510px;
@@ -966,35 +933,35 @@ p {
   }
 
   .item15 {
-    background: url("../../res/drawings/doodle15.jpg");
+    background: url("../res/drawings/doodle15.jpg");
     background-position: center;
     background-size: 120%;
     height: 400px;
   }
 
   .item16 {
-    background: url("../../res/drawings/board.jpg");
+    background: url("../res/drawings/board.jpg");
     background-position: center;
     background-size: cover;
     height: 600px;
   }
 
   .item17 {
-    background: url("../../res/drawings/tails.jpg");
+    background: url("../res/drawings/tails.jpg");
     background-position: center;
     background-size: cover;
     height: 600px;
   }
 
   .item18 {
-    background: url("../../res/drawings/girl.jpg");
+    background: url("../res/drawings/girl.jpg");
     background-position: center;
     background-size: cover;
     height: 600px;
   }
 
   .item19 {
-    background: url("../../res/drawings/color.jpg");
+    background: url("../res/drawings/color.jpg");
     background-position: center;
     background-size: cover;
     height: 600px;
@@ -1005,7 +972,7 @@ p {
   background: red;
   width: 100%;
   height: 400px;
-  background: url("../../res/drawings/doodle9.jpg");
+  background: url("../res/drawings/doodle9.jpg");
   background-attachment: fixed;
   background-position: center -120px;
   text-align: center;

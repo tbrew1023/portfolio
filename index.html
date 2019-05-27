@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8"></meta>
-    <link type="text/css" rel="stylesheet" href="stylesheets/compiled-css/output.css"></link>
+    <link type="text/css" rel="stylesheet" href="stylesheets/global-styles.css"></link>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
     <script
         src="http://code.jquery.com/jquery-3.3.1.js"
@@ -11,87 +11,62 @@
     <script type="text/javascript" src="javascript/scripts.js"></script>
     <title>Home</title>
   </head>
-  <body>
+  <body style="
+  background-image: url('../../res/gifs/banner-gifs/puzzle.gif');
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  ">
     <div class="nav">
       <div class="nav-links">
-        <h2>TRENTBREW.COM</h2>
         <ul>
-          <a href="index.html"><li>HOME</li><div class="active"></div></a>
-          <a href="projects.html"><li>PROJECTS</li><div class="indicator"></div></a>
-          <a href="gallery.html"><li>GALLERY</li><div class="indicator"></div></a>
-          <a href="store.html"><li>STORE</li><div class="indicator"></div></a>
-          <a href="resume.html"><li>RESUME</li><div class="indicator"></div></a>
-          <a href="contact.html"><li>CONTACT</li><div class="indicator"></div></a>
+          <a href="index.html"><li>Portfolio</li><div class="active"></div></a>
+          <a href="gallery.html"><li>Gallery</li><div class="indicator"></div></a>
+          <a href="resume.html"><li>Resume</li><div class="indicator"></div></a>
+          <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=tbrew1023@gmail.com"><li>Contact</li><div class="indicator"></div></a>
         </ul>
       </div>
     </div>
-    <div class="container">
-      <section class="background" id="sec1">
-        <div class="content-wrapper">
-          <h2 class="content-title"><strong>Hi!</strong> My name's Trent :)</h2>
-          <p class="content-subtitle">I'm an interactive designer and full-stack developer.</p>
+    <div class="gallery-container">
+      <div class="page-head">
+        <h1>Hi, my name's Trent</h1>
+        <p>I'm an interaction designer, and full-stack developer</p> 
+      </div>
+      <p style="margin-left: 30px; margin-bottom: 0px">Projects</p>
+      <div class="gallery-grid">
+        <div class="col1">
+          <div class="gal-item item15"></div>
+          <div class="gal-item item17"></div>
+          <div class="gal-item item2"></div>
+          <div class="gal-item item3"></div>
+          <div class="gal-item item19"></div>
+          <div class="gal-item item4"></div>
         </div>
-      </section>
-      <section class="background" id="sec2">
-        <div class="content-wrapper">
-          <div class="projects">
-            <div class="left-content">
-              <h2 class="content-title">I Design Experiences</h2>
-              <p class="content-subtitle">with usability and beauty in mind.</p>
-            </div>
-            <div class="right-content">
-              <a href="project-pages/drummerboi.html"><div class="grid-item" id="item1"></div></a>
-              <a href="project-pages/quickkeys.html"><div class="grid-item" id="item2"></div></a>
-              <a href="project-pages/puzzle.html"><div class="grid-item" id="item3"></div></a>
-              <a href="project-pages/sonic-velocity.html"><div class="grid-item" id="item4"></div></a>
-            </div>
-          </div>
+        <div class="col2">
+          <div class="gal-item item16"></div>
+          <div class="gal-item item14"></div>
+          <div class="gal-item item8"></div>
+          <div class="gal-item item1"></div>
+          <div class="gal-item item7"></div>
         </div>
-      </section>
-      <section class="background" id="sec3">
-        <div class="content-wrapper">
-          <h2 class="content-title">I Bring Drawings to Life</h2>
-          <p class="content-subtitle">I see animation as a powerful tool for both creative projects and technical projects.</p>
-        </div>
-      </section>
-      <section class="background" id="sec4">
-        <div class="content-wrapper">
-          <div class="drawings">
-            <div class="left-content">
-              <h2 class="content-title">I Make Illustrations</h2>
-              <p class="content-subtitle">Drawing brings me peace, and I hope to share that peace in whatever form I can.</p>
-            </div>
-            <div class="right-content-drawings">
-              <div class="col1">
-                <a href="gallery.html"><div class="grid-item" id="item1"></div></a>
-                <!--a href="project-pages/quickkeys.html"><div class="grid-item" id="item4"></div></a-->
-              </div>
-                <div class="col2">
-                  <a href="gallery.html"><div class="grid-item" id="item2"></div></a>
-                  <!--a href="project-pages/puzzle.html"><div class="grid-item" id="item5"></div></a-->
-                </div>
-                <div class="col3">
-                <a href="gallery.html"><div class="grid-item" id="item3"></div></a>
-                <!--a href="project-pages/sonic-velocity.html"><div class="grid-item" id="item6"></div></a-->
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div class="footer">
-        <div class="inner-footer">
-          <div class="footer-col" id="col3">
-            <h3>Follow Me</h3>
-            <div class="bubble-container">
-              <a href="#"><div class="social-bubble" id="facebook"></div></a>
-              <a href="#"><div class="social-bubble" id="instagram"></div></a>
-              <a href="#"><div class="social-bubble" id="twitter"></div></a>
-              <a href="#"><div class="social-bubble" id="pinterest"></div></a>
-            </div>
-          </div>
+        <div class="col3">
+          <div class="gal-item item12"></div>
+          <div class="gal-item item13"></div>
+          <div class="gal-item item18"></div>
+          <div class="gal-item item10"></div>
+          <div class="gal-item item11"></div>
+          <div class="gal-item item6"></div>
+          <div class="gal-item item5"></div>
         </div>
       </div>
-      <div class="sub-footer"><span>© Copyright 2019 Trent Brew | All Rights Reserved | Site Developed by </span><a href="http://trentbrew.com">Trent Brew</a></div>
+    </div>
+
+    <div class="bubble-container">
+      <a href="https://www.facebook.com/trent.brew.1"><div class="social-bubble" id="facebook"></div></a>
+      <a href="https://www.instagram.com/trenton_bru/"><div class="social-bubble" id="instagram"></div></a>
+      <a href="https://twitter.com/trent_brew"><div class="social-bubble" id="twitter"></div></a>
+      <a href="https://www.pinterest.com/tbrew212/"><div class="social-bubble" id="pinterest"></div></a>
+    </div>
   </body>
 </html>
