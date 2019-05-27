@@ -284,15 +284,13 @@ body, html {
 .portfolio-grid .port-item {
   padding-top: 56.25%;
   text-align: left;
-  -webkit-transition: 300ms;
-  transition: 300ms;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .portfolio-grid .port-item .hover-title {
   background: white !important;
   height: 80px;
-  -webkit-transition: 300ms;
-  transition: 300ms;
 }
 
 .portfolio-grid .port-item .hover-title p {
@@ -308,7 +306,9 @@ body, html {
   background: url("../res/backpack_barber_full_mockup_v8.png");
   background-size: 130%;
   background-repeat: no-repeat;
-  background-position: -30px 0px;
+  background-position: 0px 0px;
+  margin-top: 100px;
+  opacity: 0;
 }
 
 .portfolio-grid .port1:hover {
@@ -321,6 +321,7 @@ body, html {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center 0px;
+  opacity: 1;
 }
 
 .portfolio-grid .port2:hover {
@@ -333,6 +334,8 @@ body, html {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center 0px;
+  margin-top: 100px;
+  opacity: 0;
 }
 
 .portfolio-grid .port3:hover {
@@ -345,6 +348,7 @@ body, html {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center 0px;
+  opacity: 1;
 }
 
 .portfolio-grid .port4:hover {
@@ -357,6 +361,8 @@ body, html {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center 0px;
+  opacity: 0;
+  margin-top: 100px;
 }
 
 .portfolio-grid .port5:hover {
@@ -369,6 +375,8 @@ body, html {
   background-repeat: no-repeat;
   background-position: top;
   background-size: 100%;
+  opacity: 0;
+  margin-top: 100px;
 }
 
 .portfolio-grid .port6:hover {
@@ -380,6 +388,8 @@ body, html {
   background: url("../res/gifs/bearboi.gif");
   background-repeat: no-repeat;
   background-size: 100%;
+  opacity: 0;
+  margin-top: 100px;
 }
 
 .portfolio-grid .port7:hover {
@@ -392,6 +402,8 @@ body, html {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: bottom;
+  opacity: 0;
+  margin-top: 100px;
 }
 
 .portfolio-grid .port8:hover {
@@ -432,19 +444,23 @@ body, html {
 }
 
 .page-head {
-  height: 30vh;
+  height: 80vh;
   width: 100%;
   text-align: center;
 }
 
-.page-head .animation {
+.page-head .parallax {
   position: absolute;
-  background: gray;
-  width: 450px;
-  height: 220px;
-  top: 200px;
+  margin: auto;
   left: 0;
   right: 0;
+  top: 240px;
+}
+
+.page-head .animation {
+  background: gray;
+  width: 450px;
+  height: 160px;
   margin: auto;
   background-repeat: no-repeat;
 }
@@ -464,7 +480,7 @@ body, html {
 .page-head h1 {
   font-size: 36px;
   margin-left: 0px !important;
-  margin-top: 450px;
+  margin-top: 40px;
   color: black;
   opacity: 1 !important;
 }
@@ -1210,6 +1226,10 @@ ul {
   margin-left: 30px;
 }
 
+.gallery-container p {
+  margin-left: 0px !important;
+}
+
 .gallery-container .gallery-grid {
   display: -ms-grid;
   display: grid;
@@ -1386,6 +1406,12 @@ ul {
   font-weight: bold;
 }
 
+@media only screen and (max-width: 1300px) {
+  .bubble-container {
+    position: absolute;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .nav {
     background: white;
@@ -1424,6 +1450,10 @@ ul {
   .page-head p {
     font-size: 10px;
     margin-top: 10px;
+  }
+  .gallery-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=global-styles.css.map */

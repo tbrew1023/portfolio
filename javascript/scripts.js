@@ -1,59 +1,50 @@
 $(window).ready(function() {
   console.log("window is ready");
+  //console.log("port1 pos: " + $(".port1").getBoundingClientRect().top);
 
-  /*$(".banner1").hover(function() {
-    console.log("on");
-    $(this).css({
-      'background-image':"url('res/gifs/bart2.gif')",
-      "filter":"contrast(1)"
-    });
-  }, function() {
-    console.log("off");
-    $(this).css({
-      'background-image':"url('res/gifs/bart2.gif')",
-      "filter":"contrast(0) brightness(2)",
-    });
+});
+
+$(window).scroll(function() {
+  var scroll = $(window).scrollTop();
+  //console.log(scroll);
+
+  $(".parallax").css({
+    "opacity":((200-(scroll/2.5))/100),
+    "top": 240 + (scroll / 2) + "px"
   });
 
-  $(".banner2").hover(function() {
-    console.log("on");
-    $(this).css({
-      'background-image':"url('res/gifs/soniccd.gif')",
-      "filter":"contrast(1)"
-    });
-  }, function() {
-    console.log("off");
-    $(this).css({
-      'background-image':"url('res/gifs/soniccd.gif')",
-      "filter":"contrast(0) brightness(2)"
-    });
+  $(".parallax h1").css({
+   // "margin-top":(40-(scroll/8))
   });
 
-  $(".banner3").hover(function() {
-    console.log("on");
-    $(this).css({
-      'background-image':"url('res/gifs/lockedout.gif')",
-      "filter":"contrast(1)"
+  if(scroll >= 400) {
+    $(".port3").css({
+      "opacity":"1",
+      "margin-top":"0px"
     });
-  }, function() {
-    console.log("off");
-    $(this).css({
-      'background-image':"url('res/gifs/lockedout.gif')",
-      "filter":"contrast(0) brightness(2)"
+    $(".port1").css({
+      "opacity":"1",
+      "margin-top":"0px"
     });
-  });
-
-  $(".banner4").hover(function() {
-    console.log("on");
-    $(this).css({
-      'background-image':"url('res/gifs/cool2.gif')",
-      "filter":"contrast(1)"
+  }
+  if(scroll >= 800) {
+    $(".port5").css({
+      "opacity":"1",
+      "margin-top":"0px"
     });
-  }, function() {
-    console.log("off");
-    $(this).css({
-      'background-image':"url('res/gifs/cool2.gif')",
-      "filter":"contrast(0) brightness(2)"
+    $(".port6").css({
+      "opacity":"1",
+      "margin-top":"0px"
     });
-  });*/
+  }
+  if(scroll >= 1200) {
+    $(".port7").css({
+      "opacity":"1",
+      "margin-top":"0px"
+    });
+    $(".port8").css({
+      "opacity":"1",
+      "margin-top":"0px"
+    });
+  }
 });
