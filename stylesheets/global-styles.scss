@@ -41,6 +41,7 @@ body, html {
 .page-head {
   height: 30vh;
   width: 100%;
+  text-align: center;
 
   h1 {
     font-size: 36px;
@@ -733,7 +734,7 @@ p {
 }
 
 .bubble-container {
-  display: flex;  
+  position: fixed;
   padding-bottom: 100px;
   z-index: 2;
   margin: auto auto auto 50px;
