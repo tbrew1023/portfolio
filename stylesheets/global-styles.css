@@ -1427,6 +1427,23 @@ ul {
     margin: auto;
     padding-bottom: 0px;
   }
+  .page-head {
+    height: 100vh;
+  }
+  .page-head h1 {
+    font-size: 32px;
+  }
+  .page-head p {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  .page-head .parallax {
+    top: 240px;
+  }
+  .page-head .animation {
+    background-position: -50px center;
+    height: 240px;
+  }
   .portfolio-grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1442,7 +1459,7 @@ ul {
         grid-template-columns: 1fr;
   }
   .port-item {
-    opacity: 1;
+    opacity: 1 !important;
     margin-top: 0px;
   }
 }
