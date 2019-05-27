@@ -1388,7 +1388,42 @@ ul {
 
 @media only screen and (max-width: 768px) {
   .nav {
-    background: red;
+    background: white;
+    width: 100%;
+    position: relative;
+  }
+  .bubble-container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 150px;
+    margin: auto;
+    padding-bottom: 0px;
+  }
+  .portfolio-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .portfolio-grid .hover-title {
+    padding-left: 20px;
+  }
+  .page-head {
+    height: 100vh;
+  }
+  .page-head h1 {
+    margin-top: 0px;
+    font-size: 28px;
+    padding-top: 350px;
+  }
+  .page-head .animation {
+    height: 200px;
+    background-position: -60px center;
+    margin-top: -50px;
+  }
+  .page-head p {
+    font-size: 10px;
+    margin-top: 10px;
   }
 }
 /*# sourceMappingURL=global-styles.css.map */
