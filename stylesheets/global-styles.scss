@@ -38,16 +38,192 @@ body, html {
   overflow: visible;
 }
 
+.portfolio-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding-bottom: 100px;
+
+  .port-item {
+    padding-top: 56.25%;
+    text-align: left;
+    transition: 300ms;
+
+    .hover-title {
+      background: white !important;
+      height: 80px;
+      transition: 300ms;
+
+      p {
+        color: black;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
+
+  .port1 {
+    background: url("../res/backpack_barber_full_mockup_v8.png");
+    background-size: 130%;
+    background-repeat: no-repeat;
+    background-position: -30px 0px;
+    &:hover {
+      background-size: 140%;
+      cursor: pointer;
+      //transform: scale(1.05)
+    }
+  }
+
+  .port2 {
+    background: url("../res/gifs/quickkeys.gif");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    &:hover {
+      background-size: 110%;
+      cursor: pointer;
+    }
+  }
+
+  .port3 {
+    background: url("../res/gifs/drummerboi.gif");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    &:hover {
+      background-size: 110%;
+      cursor: pointer;
+    }
+  }
+
+  .port4 {
+    background: url("../res/gifs/puzzle.gif");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    &:hover {
+      background-size: 110%;
+      cursor: pointer;
+    }
+  }
+
+  .port5 {
+    background: url("../res/gifs/monday.gif");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    &:hover {
+      background-size: 110%;
+      cursor: pointer;
+    }
+  }
+
+  .port6 {
+    background: url("../res/gifs/bearboi.gif");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    &:hover {
+      background-size: 110%;
+      cursor: pointer;
+    }
+  }
+
+  .port7 {
+    background: url("../res/gifs/material.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    &:hover {
+      background-size: 110%;
+      cursor: pointer;
+    }
+  }
+
+  .port8 {
+    background: url("../res/gifs/sv-aquatic-kingdom.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    &:hover {
+      background-size: 110%;
+      cursor: pointer;
+    }
+  }
+
+  h3 {
+    padding: 20px 20px 10px 0px;
+    margin: 0px;
+    opacity: 1;
+  }
+
+  p {
+    padding: 0px;
+    margin: 0px;
+    opacity: 1;
+  }
+}
+
+.page-head-gal {
+  //height: 200px;
+  max-width: 1100px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+
+  h1 {
+    font-size: 36px;
+    margin-left: 0px !important;
+    margin-top: 120px;
+    color: black;
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 18px;
+    //margin-top: 30px;
+  }
+}
+
 .page-head {
   height: 30vh;
   width: 100%;
   text-align: center;
 
+  .animation {
+    position: absolute;
+    background: gray;
+    width: 450px;
+    height: 220px;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-repeat: no-repeat;
+  }
+
+  .ani1 {
+    background: url("../res/gifs/hello.gif");
+    background-size: cover;
+    background-position: -30px 200px;
+  }
+
+  .ani2 {
+    background: url("../res/gifs/bearboi.gif");
+    background-size: contain;
+    background-position: center;
+  }
+
   h1 {
     font-size: 36px;
     margin-left: 0px !important;
-    margin-top: 250px;
+    margin-top: 450px;
     color: black;
+    opacity: 1 !important;
   }
 
   p {
@@ -306,7 +482,7 @@ p {
 }
 
 .project-banner {
-  background: linear-gradient(white, #BDBDBD);
+  background: linear-gradient(white, #e0e0e0);
   width: 100%;
   height: 400px;
   //background-image: url("../../res/gifs/quickkeys.gif");
@@ -321,6 +497,7 @@ p {
     font-size: 60px;
     padding-top: 60px;
     font-family: $FontPrimary;
+    font-weight: normal;
     //mix-blend-mode: difference;
   }
 
@@ -371,6 +548,12 @@ p {
 .text-container {
   //background: blue;
   margin-left: 50px;
+
+  p {
+    a {
+      color: darkblue;
+    }
+  }
 }
 
 .shot {
@@ -738,8 +921,8 @@ p {
   padding-bottom: 100px;
   z-index: 2;
   margin: auto auto auto 50px;
-  top: 220px;
-  //bottom: 0px;
+  top: 0px;
+  bottom: 0px;
   right: 0px;
   left: 0px;
   height: 110px;
@@ -808,7 +991,7 @@ ul {
 .gallery-container {
   //background: red;
   max-width: 1100px;
-  margin: 60px auto 0px auto;
+  margin: 0px auto 0px auto;
 
   h1 {
     font-family: $FontPrimary;

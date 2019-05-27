@@ -271,17 +271,202 @@ body, html {
   overflow: visible;
 }
 
+.portfolio-grid {
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding-bottom: 100px;
+}
+
+.portfolio-grid .port-item {
+  padding-top: 56.25%;
+  text-align: left;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.portfolio-grid .port-item .hover-title {
+  background: white !important;
+  height: 80px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.portfolio-grid .port-item .hover-title p {
+  color: black;
+}
+
+.portfolio-grid .port-item:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.portfolio-grid .port1 {
+  background: url("../res/backpack_barber_full_mockup_v8.png");
+  background-size: 130%;
+  background-repeat: no-repeat;
+  background-position: -30px 0px;
+}
+
+.portfolio-grid .port1:hover {
+  background-size: 140%;
+  cursor: pointer;
+}
+
+.portfolio-grid .port2 {
+  background: url("../res/gifs/quickkeys.gif");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center 0px;
+}
+
+.portfolio-grid .port2:hover {
+  background-size: 110%;
+  cursor: pointer;
+}
+
+.portfolio-grid .port3 {
+  background: url("../res/gifs/drummerboi.gif");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center 0px;
+}
+
+.portfolio-grid .port3:hover {
+  background-size: 110%;
+  cursor: pointer;
+}
+
+.portfolio-grid .port4 {
+  background: url("../res/gifs/puzzle.gif");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center 0px;
+}
+
+.portfolio-grid .port4:hover {
+  background-size: 110%;
+  cursor: pointer;
+}
+
+.portfolio-grid .port5 {
+  background: url("../res/gifs/monday.gif");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center 0px;
+}
+
+.portfolio-grid .port5:hover {
+  background-size: 110%;
+  cursor: pointer;
+}
+
+.portfolio-grid .port6 {
+  background: url("../res/gifs/bearboi.gif");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+}
+
+.portfolio-grid .port6:hover {
+  background-size: 110%;
+  cursor: pointer;
+}
+
+.portfolio-grid .port7 {
+  background: url("../res/gifs/material.gif");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.portfolio-grid .port7:hover {
+  background-size: 110%;
+  cursor: pointer;
+}
+
+.portfolio-grid .port8 {
+  background: url("../res/gifs/sv-aquatic-kingdom.gif");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+}
+
+.portfolio-grid .port8:hover {
+  background-size: 110%;
+  cursor: pointer;
+}
+
+.portfolio-grid h3 {
+  padding: 20px 20px 10px 0px;
+  margin: 0px;
+  opacity: 1;
+}
+
+.portfolio-grid p {
+  padding: 0px;
+  margin: 0px;
+  opacity: 1;
+}
+
+.page-head-gal {
+  max-width: 1100px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+}
+
+.page-head-gal h1 {
+  font-size: 36px;
+  margin-left: 0px !important;
+  margin-top: 120px;
+  color: black;
+  font-weight: normal;
+}
+
+.page-head-gal p {
+  font-size: 18px;
+}
+
 .page-head {
   height: 30vh;
   width: 100%;
   text-align: center;
 }
 
+.page-head .animation {
+  position: absolute;
+  background: gray;
+  width: 450px;
+  height: 220px;
+  top: 200px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-repeat: no-repeat;
+}
+
+.page-head .ani1 {
+  background: url("../res/gifs/hello.gif");
+  background-size: cover;
+  background-position: -30px 200px;
+}
+
+.page-head .ani2 {
+  background: url("../res/gifs/bearboi.gif");
+  background-size: contain;
+  background-position: center;
+}
+
 .page-head h1 {
   font-size: 36px;
   margin-left: 0px !important;
-  margin-top: 250px;
+  margin-top: 450px;
   color: black;
+  opacity: 1 !important;
 }
 
 .page-head p {
@@ -517,8 +702,8 @@ p {
 }
 
 .project-banner {
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#BDBDBD));
-  background: linear-gradient(white, #BDBDBD);
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#e0e0e0));
+  background: linear-gradient(white, #e0e0e0);
   width: 100%;
   height: 400px;
   background-repeat: no-repeat;
@@ -533,6 +718,7 @@ p {
   font-size: 60px;
   padding-top: 60px;
   font-family: "Questrial", sans-serif;
+  font-weight: normal;
 }
 
 .project-banner p {
@@ -568,6 +754,10 @@ p {
 
 .text-container {
   margin-left: 50px;
+}
+
+.text-container p a {
+  color: darkblue;
 }
 
 .shot {
@@ -926,7 +1116,8 @@ p {
   padding-bottom: 100px;
   z-index: 2;
   margin: auto auto auto 50px;
-  top: 220px;
+  top: 0px;
+  bottom: 0px;
   right: 0px;
   left: 0px;
   height: 110px;
@@ -992,7 +1183,7 @@ ul {
 
 .gallery-container {
   max-width: 1100px;
-  margin: 60px auto 0px auto;
+  margin: 0px auto 0px auto;
 }
 
 .gallery-container h1 {
