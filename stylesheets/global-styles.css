@@ -271,14 +271,24 @@ body, html {
   overflow: visible;
 }
 
+.home-container {
+  margin: 0px auto 0px auto;
+  max-width: 1100px;
+}
+
+.home-container .page-head-gal {
+  padding: 80px 0px 120px 0px;
+  text-align: center;
+  max-width: 1100px;
+}
+
 .portfolio-grid {
-  margin-top: 30px;
+  margin: 30px auto auto auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
-  padding-bottom: 100px;
 }
 
 .portfolio-grid .port-item {
@@ -295,6 +305,10 @@ body, html {
 
 .portfolio-grid .port-item .hover-title p {
   color: black;
+}
+
+.portfolio-grid .port-item .hover-title span {
+  margin-left: 30px;
 }
 
 .portfolio-grid .port-item:hover {
@@ -434,9 +448,9 @@ body, html {
 .page-head-gal h1 {
   font-size: 36px;
   margin-left: 0px !important;
-  margin-top: 120px;
+  margin-top: 160px;
   color: black;
-  font-weight: normal;
+  font-weight: normal !important;
 }
 
 .page-head-gal p {
@@ -483,6 +497,7 @@ body, html {
   margin-top: 40px;
   color: black;
   opacity: 1 !important;
+  font-weight: normal !important;
 }
 
 .page-head p {
@@ -797,6 +812,32 @@ p {
   padding-top: 56.25%;
 }
 
+.back-gal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  color: black;
+  font-weight: bold;
+  top: 10px;
+  left: 20px;
+  font-size: 22px;
+  line-height: 40px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  z-index: 20;
+}
+
+.back-gal:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.back-gal:hover .back-arrow {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
 .back-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -810,7 +851,7 @@ p {
   line-height: 40px;
   -webkit-transition: 300ms;
   transition: 300ms;
-  z-index: 10;
+  z-index: 20;
 }
 
 .back-link:hover {
@@ -868,7 +909,26 @@ p {
   background-size: cover;
 }
 
-img {
+.gal-image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  margin-top: 40px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.gal-image:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: 1 !important;
+}
+
+.gal1 {
+  margin-top: 120px;
+}
+
+.gal-image img {
   width: 100%;
 }
 
@@ -1091,48 +1151,6 @@ img {
           box-shadow: 0px 15px 20px 5px rgba(0, 0, 0, 0.1);
 }
 
-.right-content-drawings #item1 {
-  background-image: url("../res/drawings/doodle15.jpg");
-  background-size: 160%;
-}
-
-.right-content-drawings #item2 {
-  background-image: url("../res/drawings/doodle13.jpg");
-  background-size: 160%;
-  background-position: -160px center;
-}
-
-.right-content-drawings #item3 {
-  background-image: url("../res/drawings/doodle14.jpg");
-  background-position: center -150px;
-  background-size: 150%;
-}
-
-.right-content-drawings #item4 {
-  background-image: url("../res/drawings/doodle14.jpg");
-  background-size: 160%;
-}
-
-.right-content-drawings #item5 {
-  background-image: url("../res/drawings/doodle11.jpg");
-}
-
-.right-content-drawings #item6 {
-  background-image: url("../res/drawings/doodle6.jpg");
-}
-
-.right-content-drawings #item7 {
-  background-image: url("../res/drawings/doodle7.jpg");
-}
-
-.right-content-drawings #item8 {
-  background-image: url("../res/drawings/doodle10.jpg");
-}
-
-.right-content-drawings #item9 {
-  background-image: url("../res/drawings/doodle11.jpg");
-}
-
 .top {
   position: fixed;
   width: 100%;
@@ -1144,16 +1162,13 @@ img {
 }
 
 .bubble-container {
-  position: fixed;
-  padding-bottom: 100px;
-  z-index: 2;
-  margin: auto auto auto 50px;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-  height: 110px;
-  width: 30px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 150px;
+  margin: auto;
+  padding: 120px 0px 120px 0px;
 }
 
 h3 {
@@ -1214,8 +1229,13 @@ ul {
 }
 
 .gallery-container {
-  max-width: 1100px;
   margin: 0px auto 0px auto;
+}
+
+.gallery-container .page-head-gal {
+  padding: 80px 0px 120px 0px;
+  text-align: center;
+  width: 100%;
 }
 
 .gallery-container h1 {
@@ -1231,158 +1251,505 @@ ul {
 }
 
 .gallery-container .gallery-grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  padding-bottom: 60px;
+}
+
+.gallery-container .gallery-grid-container2 {
+  display: none;
 }
 
 .gallery-container .gal-item {
-  margin: 40px 20px 40px 20px;
+  margin: 0px;
   background: #BDBDBD;
-  height: 550px;
+  height: 100vh;
+  width: 100%;
   -webkit-transition: 300ms;
   transition: 300ms;
-}
-
-.gallery-container .gal-item:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-box-shadow: 0px 15px 20px 5px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 15px 20px 5px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+  /*&:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 15px 20px 5px rgba(black,0.1);
+      cursor: pointer;
+    }*/
 }
 
 .gallery-container .item1 {
-  background: url("../res/drawings/doodle1.jpg");
+  background: #252525;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover1 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/doodle1.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover1.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item2 {
-  background: url("../res/drawings/doodle2.jpg");
+  background: #252525;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover2 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/doodle2.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover2.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item3 {
-  background: url("../res/drawings/doodle3.jpg");
+  background: #252525;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover3 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/doodle3.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover3.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item4 {
-  background: url("../res/drawings/doodle4.jpg");
+  background: #252525;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover4 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/doodle4.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover4.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item5 {
-  background: url("../res/drawings/doodle5.jpg");
+  background: #252525;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover5 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/doodle5.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover5.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item6 {
-  background: url("../res/drawings/doodle6.jpg");
+  background: #252525;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover6 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/doodle6.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover6.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item7 {
-  background: url("../res/drawings/doodle7.jpg");
+  background: #252525;
   background-position: center;
   background-size: cover;
   height: 670px;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover7 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/doodle7.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover7.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item8 {
-  background: url("../res/drawings/doodle8.jpg");
+  background: #252525;
   background-position: center;
   background-size: cover;
   height: 800ms;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover8 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/doodle8.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover8.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item9 {
-  background: url("../res/drawings/doodle9.jpg");
+  background: #252525;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover9 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/doodle9.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover9.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item10 {
-  background: url("../res/drawings/doodle10.jpg");
+  background: #252525;
   background-position: center;
   background-size: cover;
-  height: 300px;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover10 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/doodle10.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover10.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item11 {
-  background: url("../res/drawings/doodle11.jpg");
+  background: #252525;
   background-position: center -190px;
   background-size: 130%;
-  height: 400px;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover11 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/doodle11.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover11.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item12 {
-  background: url("../res/drawings/doodle12.jpg");
-  background-position: left;
+  background: #252525;
+  background-position: -100px center;
   background-size: cover;
-  height: 200px;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover12 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/doodle12.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover12.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item13 {
-  background: url("../res/drawings/doodle13.jpg");
+  background: #252525;
   background-position: center;
   background-size: 120%;
-  height: 400px;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover13 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/doodle13.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover13.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item14 {
-  background: url("../res/drawings/doodle14.jpg");
-  background-position: center -100px;
+  background: #252525;
+  background-position: center;
   background-size: 120%;
-  height: 510px;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover14 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/doodle14.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover14.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item15 {
-  background: url("../res/drawings/doodle15.jpg");
+  background: #252525;
   background-position: center;
   background-size: 120%;
-  height: 400px;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover15 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/doodle15.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover15.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item16 {
-  background: url("../res/drawings/board.jpg");
+  background: #252525;
   background-position: center;
   background-size: cover;
-  height: 600px;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover16 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/board.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover16.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item17 {
-  background: url("../res/drawings/tails.jpg");
+  background: #252525;
   background-position: center;
   background-size: cover;
-  height: 600px;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover17 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/tails.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover17.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item18 {
-  background: url("../res/drawings/girl.jpg");
+  background: #252525;
   background-position: center;
   background-size: cover;
-  height: 600px;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover18 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/girl.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover18.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-container .item19 {
-  background: url("../res/drawings/color.jpg");
+  background: #252525;
   background-position: center;
   background-size: cover;
-  height: 600px;
+  background-attachment: fixed;
+}
+
+.gallery-container #item-mover19 {
+  width: 100%;
+  height: 100vh;
+  background: url("../res/drawings/color.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 150%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+
+.gallery-container #item-mover19.no-more-slidey {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .gallery-banner {
-  background: red;
   width: 100%;
   height: 400px;
   background: url("../res/drawings/doodle9.jpg");
@@ -1406,12 +1773,6 @@ ul {
   font-weight: bold;
 }
 
-@media only screen and (max-width: 1300px) {
-  .bubble-container {
-    position: absolute;
-  }
-}
-
 @media only screen and (max-width: 768px) {
   .nav {
     background: white;
@@ -1425,7 +1786,14 @@ ul {
     display: flex;
     width: 150px;
     margin: auto;
-    padding-bottom: 0px;
+    padding-bottom: 100px;
+  }
+  .gal-image {
+    width: 85% !important;
+    pointer-events: none;
+  }
+  .back-gal {
+    bottom: 0px;
   }
   .page-head {
     height: 100vh;
@@ -1435,7 +1803,7 @@ ul {
   }
   .page-head h1 {
     font-size: 32px;
-    font-weight: bold;
+    font-weight: normal !important;
   }
   .page-head p {
     font-size: 12px;
@@ -1456,12 +1824,18 @@ ul {
   .portfolio-grid .hover-title {
     padding-left: 20px;
   }
+  .project-banner h1 {
+    font-size: 28px;
+  }
+  .project-container {
+    display: block !important;
+  }
   .gallery-container {
     width: 100%;
   }
   .gallery-grid {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
   }
   .port-item {
     opacity: 1 !important;

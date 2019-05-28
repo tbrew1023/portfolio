@@ -38,12 +38,26 @@ body, html {
   overflow: visible;
 }
 
+.home-container {
+  //background: red;
+  margin: 0px auto 0px auto;
+  max-width: 1100px;
+
+  .page-head-gal {
+    padding: 80px 0px 120px 0px;
+    text-align: center;
+    //background: linear-gradient(white, #e0e0e0);
+    max-width: 1100px;
+  }
+}
+
 .portfolio-grid {
-  margin-top: 30px;
+  margin: 30px auto auto auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
-  padding-bottom: 100px;
+  //padding-bottom: 100px;
+  //max-width: 1100px;
 
   .port-item {
     padding-top: 56.25%;
@@ -56,6 +70,10 @@ body, html {
 
       p {
         color: black;
+      }
+
+      span {
+        margin-left: 30px;
       }
     }
 
@@ -191,9 +209,9 @@ body, html {
   h1 {
     font-size: 36px;
     margin-left: 0px !important;
-    margin-top: 120px;
+    margin-top: 160px;
     color: black;
-    font-weight: normal;
+    font-weight: normal !important;
   }
 
   p {
@@ -242,6 +260,7 @@ body, html {
     margin-top: 40px;
     color: black;
     opacity: 1 !important;
+    font-weight: normal !important;
   }
 
   p {
@@ -597,6 +616,28 @@ p {
   padding-top: 56.25%;
 }
 
+.back-gal {
+  display: flex;
+  position: fixed;
+  color: black;
+  font-weight: bold;
+  top: 10px;
+  left: 20px;
+  font-size: 22px;
+  line-height: 40px;
+  transition: 300ms;
+  z-index: 20;
+
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+
+    .back-arrow {
+      transform: translateX(-10px);
+    }
+  }
+}
+
 .back-link {
   display: flex;
   position: fixed;
@@ -607,7 +648,7 @@ p {
   font-size: 22px;
   line-height: 40px;
   transition: 300ms;
-  z-index: 10;
+  z-index: 20;
 
   &:hover {
     opacity: 0.7;
@@ -664,7 +705,24 @@ p {
   background-size: cover;
 }
 
-img {
+.gal-image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  margin-top: 40px;
+  transition: 300ms;
+
+  &:hover {
+    transform: scale(1.05);
+    opacity: 1 !important;
+  }
+}
+
+.gal1 {
+  margin-top: 120px;
+}
+
+.gal-image img {
   width: 100%;
 }
 
@@ -903,42 +961,6 @@ img {
 
     }
   }
-
-  #item1 {
-    background-image: url("../res/drawings/doodle15.jpg");
-    background-size: 160%;
-    //background-size: contain;
-    //transform: rotate(30deg);
-  }
-  #item2 {
-    background-image: url("../res/drawings/doodle13.jpg");
-    background-size: 160%;
-    background-position: -160px center;
-  }
-  #item3 {
-    background-image: url("../res/drawings/doodle14.jpg");
-    background-position: center -150px;
-    background-size: 150%;
-  }
-  #item4 {
-    background-image: url("../res/drawings/doodle14.jpg");
-    background-size: 160%;
-  }
-  #item5 {
-    background-image: url("../res/drawings/doodle11.jpg");
-  }
-  #item6 {
-    background-image: url("../res/drawings/doodle6.jpg");
-  }
-  #item7 {
-    background-image: url("../res/drawings/doodle7.jpg");
-  }
-  #item8 {
-    background-image: url("../res/drawings/doodle10.jpg");
-  }
-  #item9 {
-    background-image: url("../res/drawings/doodle11.jpg");
-  }
 }
 
 .top {
@@ -951,17 +973,16 @@ img {
   z-index: -1;
 }
 
+.gal-end {
+
+}
+
 .bubble-container {
-  position: fixed;
-  padding-bottom: 100px;
-  z-index: 2;
-  margin: auto auto auto 50px;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-  height: 110px;
-  width: 30px;
+  position: relative;
+  display: flex;
+  width: 150px;
+  margin: auto;
+  padding: 120px 0px 120px 0px;
 }
 
 h3 {
@@ -1025,8 +1046,14 @@ ul {
 
 .gallery-container {
   //background: red;
-  max-width: 1100px;
   margin: 0px auto 0px auto;
+
+  .page-head-gal {
+    padding: 80px 0px 120px 0px;
+    text-align: center;
+    //background: linear-gradient(white, #e0e0e0);
+    width: 100%;
+  }
 
   h1 {
     font-family: $FontPrimary;
@@ -1041,158 +1068,441 @@ ul {
   }
 
   .gallery-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    //display: grid;
+    //grid-template-columns: 1fr 1fr 1fr;
     //background: yellow;
     width: 100%;
     //height: 1000px;
-    padding-bottom: 60px;
+  }
+
+  .gallery-grid-container2 {
+    display: none;
+  }
+
+  .drawing-banner {
+    
   }
 
   .gal-item {
-    margin: 40px 20px 40px 20px;
+    margin: 0px;
     background: #BDBDBD;
-    height: 550px;
+    height: 100vh;
+    width: 100%;
     //border-radius:10px;
     transition: 300ms;
 
-    &:hover {
+    /*&:hover {
       transform: scale(1.05);
       box-shadow: 0px 15px 20px 5px rgba(black,0.1);
       cursor: pointer;
-    }
+    }*/
   }
 
   .item1 {
-    background: url("../res/drawings/doodle1.jpg");
+    //background: url("../res/drawings/doodle1.jpg");
+    background: #252525;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+  }
+
+  #item-mover1 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/doodle1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item2 {
-    background: url("../res/drawings/doodle2.jpg");
+    background: #252525;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+  }
+
+  #item-mover2 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/doodle2.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item3 {
-    background: url("../res/drawings/doodle3.jpg");
+    background: #252525;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+  }
+
+  #item-mover3 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/doodle3.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item4 {
-    background: url("../res/drawings/doodle4.jpg");
+    background: #252525;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+  }
+
+  #item-mover4 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/doodle4.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item5 {
-    background: url("../res/drawings/doodle5.jpg");
+    background: #252525;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+  }
+
+  #item-mover5 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/doodle5.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item6 {
-    background: url("../res/drawings/doodle6.jpg");
+    background: #252525;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+  }
+
+  #item-mover6 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/doodle6.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item7 {
-    background: url("../res/drawings/doodle7.jpg");
+    background: #252525;
     background-position: center;
     background-size: cover;
     height: 670px;
+    background-attachment: fixed;
+  }
+
+  #item-mover7 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/doodle7.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item8 {
-    background: url("../res/drawings/doodle8.jpg");
+    background: #252525;
     background-position: center;
     background-size: cover;
     height: 800ms;
+    background-attachment: fixed;
+  }
+
+  #item-mover8 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/doodle8.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item9 {
-    background: url("../res/drawings/doodle9.jpg");
+    background: #252525;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+  }
+
+  #item-mover9 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/doodle9.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item10 {
-    background: url("../res/drawings/doodle10.jpg");
+    background: #252525;
     background-position: center;
     background-size: cover;
-    height: 300px;
+    background-attachment: fixed;
+  }
+
+  #item-mover10 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/doodle10.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item11 {
-    background: url("../res/drawings/doodle11.jpg");
+    background: #252525;
     background-position: center -190px;
     background-size: 130%;
-    height: 400px;
+    background-attachment: fixed;
+  }
+
+  #item-mover11 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/doodle11.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item12 {
-    background: url("../res/drawings/doodle12.jpg");
-    background-position: left;
+    background: #252525;
+    background-position: -100px center;
     background-size: cover;
-    height: 200px;
+    background-attachment: fixed;
+  }
+
+  #item-mover12 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/doodle12.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item13 {
-    background: url("../res/drawings/doodle13.jpg");
+    background: #252525;
     background-position: center;
     background-size: 120%;
-    height: 400px;
+    background-attachment: fixed;
+  }
+
+  #item-mover13 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/doodle13.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item14 {
-    background: url("../res/drawings/doodle14.jpg");
-    background-position: center -100px;
+    background: #252525;
+    background-position: center;
     background-size: 120%;
-    height: 510px;
+    background-attachment: fixed;
+  }
 
+  #item-mover14 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/doodle14.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item15 {
-    background: url("../res/drawings/doodle15.jpg");
+    background: #252525;
     background-position: center;
     background-size: 120%;
-    height: 400px;
+    background-attachment: fixed;
+  }
+
+  #item-mover15 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/doodle15.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item16 {
-    background: url("../res/drawings/board.jpg");
+    background: #252525;
     background-position: center;
     background-size: cover;
-    height: 600px;
+    background-attachment: fixed;
+  }
+
+  #item-mover16 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/board.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item17 {
-    background: url("../res/drawings/tails.jpg");
+    background: #252525;
     background-position: center;
     background-size: cover;
-    height: 600px;
+    background-attachment: fixed;
+  }
+
+  #item-mover17 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/tails.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item18 {
-    background: url("../res/drawings/girl.jpg");
+    background: #252525;
     background-position: center;
     background-size: cover;
-    height: 600px;
+    background-attachment: fixed;
+  }
+
+  #item-mover18 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/girl.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 
   .item19 {
-    background: url("../res/drawings/color.jpg");
+    background: #252525;
     background-position: center;
     background-size: cover;
-    height: 600px;
+    background-attachment: fixed;
+  }
+
+  #item-mover19 {
+    width: 100%;
+    height: 100vh;
+    background: url("../res/drawings/color.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 150%;
+    transform: scale(1);
+    transition: background-position 500ms;
+    &.no-more-slidey {
+      transition: none;
+    }
   }
 }
 
 .gallery-banner {
-  background: red;
+  //background: red;
   width: 100%;
   height: 400px;
   background: url("../res/drawings/doodle9.jpg");
@@ -1217,9 +1527,6 @@ ul {
 }
 
 @media only screen and (max-width: 1300px) {
-    .bubble-container {
-      position: absolute;
-    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1234,7 +1541,16 @@ ul {
       display: flex;
       width: 150px;
       margin: auto;
-      padding-bottom: 0px;
+      padding-bottom: 100px;
+    }
+
+    .gal-image {
+      width: 85% !important;
+      pointer-events: none;
+    }
+
+    .back-gal {
+      bottom: 0px;
     }
 
     .page-head {
@@ -1246,7 +1562,7 @@ ul {
 
       h1 {
         font-size: 32px;
-        font-weight: bold;
+        font-weight: normal !important;
       }
 
       p {
@@ -1273,12 +1589,22 @@ ul {
       }
     }
 
+    .project-banner {
+      h1 {
+        font-size: 28px;
+      }
+    }
+
+    .project-container {
+      display: block !important;
+    }
+
     .gallery-container {
       width: 100%;
     }
 
     .gallery-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr !important;
     }
 
     .port-item {
