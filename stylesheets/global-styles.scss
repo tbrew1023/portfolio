@@ -1687,4 +1687,21 @@ ul {
       opacity: 1 !important;
       margin-top: 0px;
     }
+
+    .page-container {
+      display: none;
+    }
+
+    .download {
+      margin: auto;
+      padding: 0px;
+      left: 0;
+      right: 0;
+      top: 0;
+      right: 0;
+
+      .bubble-container {
+        top: -100px;
+      }
+    }
 }

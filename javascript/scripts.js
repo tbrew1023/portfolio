@@ -5,6 +5,11 @@ $(window).ready(function() {
   console.log(windowWidth);
   //console.log("port1 pos: " + $(".port1").getBoundingClientRect().top);
 
+  $(".page-head h1").css({
+    "opacity":"1",
+    "margin-top":"40px"
+  });
+
   setTimeout(function() {
 
     console.log("swoop");
@@ -16,10 +21,6 @@ $(window).ready(function() {
     });
   }, 100);
   setTimeout(function() {
-    $(".page-head h1").css({
-      "opacity":"1",
-      "margin-top":"40px"
-    });
     console.log("swoop2");
     $(".col2").css({
       "opacity":"1"
