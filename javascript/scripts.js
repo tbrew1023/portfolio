@@ -65,9 +65,9 @@ $(window).scroll(function() {
 var container = document.querySelector(".drawing-banner");
 var mover = document.querySelector(".item-mover");
 
-container.addEventListener("mousemove", function(e) {
+/*container.addEventListener("mousemove", function(e) {
   mover.style.backgroundPositionX = -e.offsetX/2 + "px";
-  mover.style.backgroundPositionY = -e.offsetY*2 + "px";
+  mover.style.backgroundPositionY = -e.offsetY*2.5 + "px";
 });
 
 container.addEventListener("mouseenter", function() {
@@ -77,4 +77,29 @@ container.addEventListener("mouseenter", function() {
     //container.removeEventListener("mouseenter");
   }, 250);
   
+});*/
+
+$(".gal-image").click(function() {
+  var currentImage = $(".expanded .image")[0].src;
+  var newImage = this.children[0].src;
+  currentImage = newImage;
+  console.log("clicked image");
+  console.log("current image: " + currentImage);
+  $(".expanded").css({
+    "opacity":"1",
+    "pointer-events":"all"
+  });
+  $(".expanded .image")[0].src=currentImage;
+  $(".expanded").click(function() {
+    console.log("back to gallery");
+    $(this).css({
+      "pointer-events":"none",
+      "opacity":"0"
+    });
+  });
+  
 });
+
+/*$(".expanded") {
+
+}*/
