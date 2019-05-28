@@ -1,8 +1,12 @@
 $(window).ready(function() {
   console.log("window is ready");
+  var windowHeight = window.innerHeight;
+  var windowWidth = window.innerWidth;
+  console.log(windowWidth);
   //console.log("port1 pos: " + $(".port1").getBoundingClientRect().top);
 
   setTimeout(function() {
+
     console.log("swoop");
     $(".col1").css({
       "opacity":"1"
@@ -12,6 +16,10 @@ $(window).ready(function() {
     });
   }, 100);
   setTimeout(function() {
+    $(".page-head h1").css({
+      "opacity":"1",
+      "margin-top":"40px"
+    });
     console.log("swoop2");
     $(".col2").css({
       "opacity":"1"
@@ -31,6 +39,10 @@ $(window).ready(function() {
   }, 500);
   setTimeout(function() {
     console.log("swoop4");
+    $(".page-head p").css({
+      "opacity":"1",
+      "margin-top":"40px"
+    });
     $(".col4").css({
       "opacity":"1"
     });
@@ -38,59 +50,67 @@ $(window).ready(function() {
       "margin-top":"0px"
     });
   }, 800);
-});
 
-$(window).scroll(function() {
-  var scroll = $(window).scrollTop();
-  //var scrollBottom = $(window).scrollTop() + $(window).height();
-  //console.log("scroll: " + scroll);
-  //console.log("scroll bottom: " + $(window).height() - scroll);
-
-  $(".parallax").css({
-    "opacity":((200-(scroll/2.5))/100),
-    "top": 240 + (scroll / 2) + "px"
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    //var scrollBottom = $(window).scrollTop() + $(window).height();
+    //console.log("scroll: " + scroll);
+    //console.log("scroll bottom: " + $(window).height() - scroll);
+  
+    if(windowWidth > 768) {
+      $(".parallax").css({
+        "opacity":((200-(scroll/2.5))/100),
+        "top": 240 + (scroll / 2) + "px"
+      });
+    }
+    else {
+      $(".parallax").css({
+        "opacity":((200-(scroll/2.5))/100),
+        "top": 140 + (scroll / 2) + "px"
+      });
+    }
+  
+    $(".parallax h1").css({
+      //"margin-top":(40-(scroll/10))
+    });
+  
+    if(scroll >= 400) {
+      $(".port3").css({
+        "opacity":"1",
+        "margin-top":"0px"
+      });
+      setTimeout(function() {
+        $(".port1").css({
+          "opacity":"1",
+          "margin-top":"0px"
+        });
+      }, 300);
+    }
+    if(scroll >= 800) {
+      $(".port5").css({
+        "opacity":"1",
+        "margin-top":"0px"
+      });
+      setTimeout(function() {
+        $(".port6").css({
+          "opacity":"1",
+          "margin-top":"0px"
+        });
+      }, 300);
+    }
+    if(scroll >= 1200) {
+      $(".port7").css({
+        "opacity":"1",
+        "margin-top":"0px"
+      });
+      setTimeout(function() {
+        $(".port8").css({
+          "opacity":"1",
+          "margin-top":"0px"
+        });
+      }, 300);
+    }
   });
-
-  $(".parallax h1").css({
-    "margin-top":(40-(scroll/10))
-  });
-
-  if(scroll >= 400) {
-    $(".port3").css({
-      "opacity":"1",
-      "margin-top":"0px"
-    });
-    setTimeout(function() {
-      $(".port1").css({
-        "opacity":"1",
-        "margin-top":"0px"
-      });
-    }, 300);
-  }
-  if(scroll >= 800) {
-    $(".port5").css({
-      "opacity":"1",
-      "margin-top":"0px"
-    });
-    setTimeout(function() {
-      $(".port6").css({
-        "opacity":"1",
-        "margin-top":"0px"
-      });
-    }, 300);
-  }
-  if(scroll >= 1200) {
-    $(".port7").css({
-      "opacity":"1",
-      "margin-top":"0px"
-    });
-    setTimeout(function() {
-      $(".port8").css({
-        "opacity":"1",
-        "margin-top":"0px"
-      });
-    }, 300);
-  }
 });
 
 //---gallery hover stuff---
