@@ -2024,5 +2024,10 @@ ul {
   .bb-logo {
     width: 40% !important;
   }
+  .image {
+    max-width: 100% !important;
+    margin: auto;
+    height: auto !important;
+  }
 }
 /*# sourceMappingURL=global-styles.css.map */
