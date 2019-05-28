@@ -1,10 +1,43 @@
 $(window).ready(function() {
   console.log("window is ready");
   //console.log("port1 pos: " + $(".port1").getBoundingClientRect().top);
-});
 
-$(document).ready(function() {
-  console.log("height: " + document.body.clientHeight);
+  setTimeout(function() {
+    console.log("swoop");
+    $(".col1").css({
+      "opacity":"1"
+    });
+    $(".col1 .gal-image img").css({
+      "margin-top":"0px"
+    });
+  }, 100);
+  setTimeout(function() {
+    console.log("swoop2");
+    $(".col2").css({
+      "opacity":"1"
+    });
+    $(".col2 .gal-image img").css({
+      "margin-top":"0px"
+    });
+  }, 300);
+  setTimeout(function() {
+    console.log("swoop3");
+    $(".col3").css({
+      "opacity":"1"
+    });
+    $(".col3 .gal-image img").css({
+      "margin-top":"0px"
+    });
+  }, 500);
+  setTimeout(function() {
+    console.log("swoop4");
+    $(".col4").css({
+      "opacity":"1"
+    });
+    $(".col4 .gal-image img").css({
+      "margin-top":"0px"
+    });
+  }, 800);
 });
 
 $(window).scroll(function() {

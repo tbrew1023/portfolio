@@ -1272,6 +1272,18 @@ ul {
   top: 0;
 }
 
+.col1, .col2, .col3, .col4 {
+  opacity: 0;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.gal-image img {
+  margin-top: 100px;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
 .gallery-container {
   margin: 0px auto 0px auto;
 }
