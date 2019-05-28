@@ -70,9 +70,10 @@ $(window).ready(function() {
         "top": 140 + (scroll / 2) + "px"
       });
     }
-  
+
     $(".parallax h1").css({
-      //"margin-top":(40-(scroll/10))
+      "margin-top":(40-(scroll/10)),
+      "transition":"0ms"
     });
   
     if(scroll >= 400) {

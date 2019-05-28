@@ -1001,6 +1001,10 @@ p {
   padding: 120px 0px 120px 0px;
 }
 
+.bubbles-res {
+  display: none;
+}
+
 h3 {
   color: rgba(black, 0.4);
   margin-bottom: 25px;
@@ -1593,6 +1597,39 @@ ul {
       margin-left: 20px !important;
     }
 
+    .project-banner {
+      h1 {
+        font-size: 36px !important;
+      }
+
+      p {
+        font-size: 12px;
+        width: 70%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .project-container {
+      padding: 0px !important;
+    }
+
+    .back-link {
+      position: relative;
+      font-size: 18px;
+    }
+
+    .shot {
+      width: auto !important;
+    }
+
+    .text-container {
+      margin-left: 30px;
+      margin-right: 30px;
+      padding-bottom: 100px;
+    }
+
     .nav {
       background: white;
       width: 100%;
@@ -1681,6 +1718,8 @@ ul {
 
     .gal-grid {
       grid-template-columns: 1fr 1fr !important;
+      width: 90% !important;
+      padding-top: 20px;
     }
 
     .port-item {
@@ -1699,9 +1738,14 @@ ul {
       right: 0;
       top: 0;
       right: 0;
+    }
 
-      .bubble-container {
-        top: -100px;
-      }
+    .bubbles-res {
+      position: absolute;
+      //top: 600px;
+      left: 0px;
+      right: 0px;
+      bottom: 80px;
+      padding: 0px;
     }
 }
