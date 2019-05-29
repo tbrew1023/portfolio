@@ -521,6 +521,14 @@ p {
   margin-top: -3px;
 }
 
+.bbbanner {
+  background: white !important;
+
+  h1 {
+    padding-top: 90px !important;
+  }
+}
+
 .project-banner {
   background: linear-gradient(white, #e0e0e0);
   width: 100%;
@@ -1802,4 +1810,8 @@ ul {
       margin: auto;
       height: auto !important; 
     }
+
+    .bbbanner h1 {
+      padding-top: 60px;
+    } 
 }

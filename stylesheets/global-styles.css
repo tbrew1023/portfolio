@@ -737,6 +737,14 @@ p {
   margin-top: -3px;
 }
 
+.bbbanner {
+  background: white !important;
+}
+
+.bbbanner h1 {
+  padding-top: 90px !important;
+}
+
 .project-banner {
   background: -webkit-gradient(linear, left top, left bottom, from(white), to(#e0e0e0));
   background: linear-gradient(white, #e0e0e0);
@@ -2028,6 +2036,9 @@ ul {
     max-width: 100% !important;
     margin: auto;
     height: auto !important;
+  }
+  .bbbanner h1 {
+    padding-top: 60px;
   }
 }
 /*# sourceMappingURL=global-styles.css.map */
