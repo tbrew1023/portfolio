@@ -10,6 +10,16 @@ $(window).ready(function() {
     "margin-top":"40px"
   });
 
+  
+  $(".bbbanner h1").css({
+    "opacity":"0.7",
+    "padding-top": "200px"
+  });
+
+  $(".bbbanner p").css({
+    "opacity":"1",
+  });
+
   setTimeout(function() {
 
     console.log("swoop");
@@ -55,13 +65,15 @@ $(window).ready(function() {
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     //var scrollBottom = $(window).scrollTop() + $(window).height();
-    //console.log("scroll: " + scroll);
+    console.log("scroll: " + scroll);
     //console.log("scroll bottom: " + $(window).height() - scroll);
   
+    //-----parallax stuff------
+
     if(windowWidth > 768) {
       $(".parallax").css({
         "opacity":((200-(scroll/2.5))/100),
-        "top": 240 + (scroll / 2) + "px"
+        "top": 260 + (scroll / 2) + "px"
       });
     }
     else {
@@ -71,10 +83,21 @@ $(window).ready(function() {
       });
     }
 
-    $(".parallax h1").css({
-      "margin-top":(40-(scroll/10)),
+    /*$(".parallax h1").css({
+      "margin-top":(40-(scroll/10)) + "px",
       "transition":"0ms"
+    });*/
+
+    $(".project-banner h1").css({
+      "padding-top":(60 + (scroll / 2)) + "px",
+      "opacity":((100-(scroll/2.5))/100)
     });
+
+    $(".project-banner p").css({
+      "opacity":((100-(scroll/2.5))/100)
+    });
+
+    //------gallery swoopage-----
   
     if(scroll >= 400) {
       $(".port3").css({
@@ -112,6 +135,8 @@ $(window).ready(function() {
         });
       }, 300);
     }
+
+    //------
   });
 });
 

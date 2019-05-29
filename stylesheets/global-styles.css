@@ -468,7 +468,7 @@ body, html {
   margin: auto;
   left: 0;
   right: 0;
-  top: 240px;
+  top: 260px;
 }
 
 .page-head .animation {
@@ -739,10 +739,28 @@ p {
 
 .bbbanner {
   background: white !important;
+  width: 100%;
+  height: 400px;
 }
 
 .bbbanner h1 {
-  padding-top: 90px !important;
+  color: black;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  padding-top: 250px;
+  text-align: center;
+  font-size: 52px;
+  font-weight: normal;
+}
+
+.bbbanner p {
+  opacity: 0;
+  text-align: center;
+  color: #bdbdbd;
+  font-size: 18px;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 .project-banner {
@@ -757,17 +775,20 @@ p {
 }
 
 .project-banner h1 {
-  color: black;
+  color: #252525;
+  opacity: 1;
   text-align: center;
-  font-size: 60px;
+  font-size: 52px;
   padding-top: 60px;
   font-family: "Questrial", sans-serif;
   font-weight: normal;
 }
 
 .project-banner p {
+  opacity: 0.5;
   text-align: center;
-  color: black;
+  color: #252525;
+  font-size: 18px;
 }
 
 .project-banner .project-icon {
@@ -810,6 +831,7 @@ p {
 }
 
 .bb-img {
+  border-radius: 10px;
   width: 100% !important;
 }
 
@@ -839,6 +861,10 @@ p {
 }
 
 .text-container p a {
+  color: darkblue;
+}
+
+.text-container-bb p a {
   color: darkblue;
 }
 
@@ -1910,6 +1936,9 @@ ul {
   .back-link {
     position: relative;
     font-size: 18px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .shot {
     width: auto !important;
@@ -2038,7 +2067,12 @@ ul {
     height: auto !important;
   }
   .bbbanner h1 {
-    padding-top: 60px;
+    padding-top: 180px !important;
+    font-size: 36px;
+  }
+  .text-container-bb {
+    padding: 50px;
+    padding-bottom: 100px;
   }
 }
 /*# sourceMappingURL=global-styles.css.map */
