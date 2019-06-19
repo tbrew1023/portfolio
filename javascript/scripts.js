@@ -124,12 +124,25 @@ $(window).ready(function() {
       }, 300);
     }
     if(scroll >= 1200) {
-      $(".port7").css({
+      $(".port8").css({
         "opacity":"1",
         "margin-top":"0px"
       });
       setTimeout(function() {
-        $(".port8").css({
+        $(".port7").css({
+          "opacity":"1",
+          "margin-top":"0px"
+        });
+      }, 300);
+    }
+
+    if(scroll >= 1600) {
+      $(".port9").css({
+        "opacity":"1",
+        "margin-top":"0px"
+      });
+      setTimeout(function() {
+        $(".port10").css({
           "opacity":"1",
           "margin-top":"0px"
         });
