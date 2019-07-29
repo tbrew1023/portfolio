@@ -189,14 +189,14 @@ body, html {
   }
 
   .port9 {
-    background: url("../res/mockups/todo.gif");
+    background: url("../res/mockups/floors/full-mockup-v3(small).png");
     background-repeat: no-repeat;
-    background-size: 110%;
-    background-position: top;
+    background-size: 170%;
+    background-position: center;
     opacity: 0;
     margin-top: 100px;
     &:hover {
-      background-size: 120%;
+      background-size: 190%;
       cursor: pointer;
     }
   }
