@@ -90,8 +90,8 @@ body, html {
     background-size: 130%;
     background-repeat: no-repeat;
     background-position: 0px 0px;
-    margin-top: 100px;
-    opacity: 0;
+    //margin-top: 100px;
+    //opacity: 0;
     &:hover {
       background-size: 140%;
       cursor: pointer;
@@ -104,7 +104,7 @@ body, html {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center 0px;
-    opacity: 1;
+    //opacity: 1;
     &:hover {
       background-size: 110%;
       cursor: pointer;
@@ -116,8 +116,8 @@ body, html {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center 0px;
-    margin-top: 100px;
-    opacity: 0;
+    //margin-top: 100px;
+    //opacity: 0;
     &:hover {
       background-size: 110%;
       cursor: pointer;
@@ -129,7 +129,7 @@ body, html {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center 0px;
-    opacity: 1;
+    //opacity: 1;
     &:hover {
       background-size: 110%;
       cursor: pointer;
@@ -141,8 +141,8 @@ body, html {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center 0px;
-    opacity: 0;
-    margin-top: 100px;
+    //opacity: 0;
+    //margin-top: 100px;
     &:hover {
       background-size: 110%;
       cursor: pointer;
@@ -154,8 +154,8 @@ body, html {
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100%;
-    opacity: 0;
-    margin-top: 100px;
+    //opacity: 0;
+   // margin-top: 100px;
     &:hover {
       background-size: 110%;
       cursor: pointer;
@@ -167,8 +167,8 @@ body, html {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom;
-    opacity: 0;
-    margin-top: 100px;
+    //opacity: 0;
+    //margin-top: 100px;
     &:hover {
       background-size: 110%;
       cursor: pointer;
@@ -180,8 +180,8 @@ body, html {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom;
-    opacity: 0;
-    margin-top: 100px;
+    //opacity: 0;
+    //margin-top: 100px;
     &:hover {
       background-size: 110%;
       cursor: pointer;
@@ -193,8 +193,8 @@ body, html {
     background-repeat: no-repeat;
     background-size: 170%;
     background-position: center;
-    opacity: 0;
-    margin-top: 100px;
+    //opacity: 0;
+    //margin-top: 100px;
     &:hover {
       background-size: 190%;
       cursor: pointer;
@@ -206,8 +206,8 @@ body, html {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom;
-    opacity: 0;
-    margin-top: 100px;
+    //opacity: 0;
+    //margin-top: 100px;
     &:hover {
       background-size: 110%;
       cursor: pointer;
@@ -225,6 +225,10 @@ body, html {
     margin: 0px;
     opacity: 1;
   }
+}
+
+.comp-img {
+  width: 60%;
 }
 
 .color-break {
@@ -297,8 +301,8 @@ body, html {
     font-size: 36px;
     margin-left: 0px !important;
     color: black;
-    margin-top: 80px;
-    opacity: 0;
+    //margin-top: 80px;
+    //opacity: 0;
     font-weight: normal !important;
     transition: 2s;
   }
@@ -307,7 +311,7 @@ body, html {
     font-size: 18px;
     margin-top: 40px;
     transition: 2s;
-    opacity: 0;
+    //opacity: 0;
   }
 }
 
@@ -546,7 +550,7 @@ p {
   transition: 300ms;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0;
+  //opacity: 0;
   margin-top: -3px;
 }
 
@@ -567,7 +571,7 @@ p {
 
   h1 {
     color: black; 
-    opacity: 0;
+    //opacity: 0;
     transition: 1s;
     padding-top: 250px;
     text-align: center;
@@ -576,7 +580,7 @@ p {
   }
 
   p {
-    opacity: 0;
+    //opacity: 0;
     text-align: center;
     color: #bdbdbd;
     font-size: 18px;
@@ -675,8 +679,9 @@ p {
 .small-bois {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 500px;
+  height: max-content;
   width: 70%;
+  padding-bottom: 50px;
   margin:auto;
   //grid-gap: 40px;
 }
@@ -1198,12 +1203,12 @@ ul {
 }
 
 .col1, .col2, .col3, .col4 {
-  opacity: 0;
+  //opacity: 0;
   transition: 2s;
 }
 
 .gal-image img {
-  margin-top: 100px;
+  //margin-top: 100px;
   transition: 2s;
 }
 
@@ -1858,11 +1863,10 @@ ul {
     }
 
     .small-bois {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      height: 300px;
+      display: block;
       width: 100%;
       margin:auto;
+      height: max-content;
       //grid-gap: 40px;
     }
     
@@ -1870,7 +1874,15 @@ ul {
       width: 90%;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 100px; 
+      margin-top: 100px;
+    }
+
+    .bb-img {
+      border-radius: 0px;
+    } 
+
+    .comp-img {
+      width: 100%;
     }
 
     .bb-logo {
