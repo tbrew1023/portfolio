@@ -427,10 +427,10 @@ body, html {
 }
 
 .portfolio-grid .port10 {
-  background: url("../res/gifs/sv-aquatic-kingdom.gif");
+  background: url("../res/gifs/monday-analysis2.gif");
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: bottom;
+  background-position: cover;
 }
 
 .portfolio-grid .port10:hover {
